@@ -120,33 +120,33 @@
 ➕ Pudding aux épices
 
 ## ▶️ Magie
-➕ Élixir de Vitalité : Soins
-➕ Potion de Bouclier d'Acier : Défense
-➕ Breuvage de Fureur : Attaque
-➕ Potion de Vitesse Éclaire : Vitesse
-➕ Philtre d'Adresse : Précision
-➕ Élixir de Régénération : Soins
-➕ Tonique d'Endurance : Défense
-➕ Potion d'Invisibilité : Défense
-➕ Potion de Force : Attaque
-➕ Breuvage de Lévitation : Vitesse
-➕ Élixir d'Aiguisage : Précision
-➕ Potion de Guérison Rapide : Soins
-➕ Tonique de Robustesse : Défense
-➕ Élixir d'Agilité : Vitesse
-➕ Potion de Puissance : Attaque
-➕ Fiole de Précision : Précision
-➕ Potion de Résistance : Défense
-➕ Élixir de Rapidité : Vitesse
-➕ Philtre d'Enchâssement : Précision
-➕ Potion de Rajeunissement : Soins
-➕ Breuvage de Bouclier Magique : Défense
-➕ Potion de Rage : Attaque
-➕ Élixir d'Évasion : Vitesse
-➕ Potion de Percée : Précision
-➕ Fiole de Guérison : Soins
-➕ Tonique d'Invulnérabilité : Défense
-➕ Potion d'Éclair : Attaque
-➕ Potion de Déplacement Rapide : Vitesse
-➕ Élixir de Visée : Précision
-➕ Breuvage de Guérison Totale : Soins
+➕ Élixir de Vitalité : Soins \
+➕ Potion de Bouclier d'Acier : Défense \
+➕ Breuvage de Fureur : Attaque \
+➕ Potion de Vitesse Éclaire : Vitesse \
+➕ Philtre d'Adresse : Précision \
+➕ Élixir de Régénération : Soins \
+➕ Tonique d'Endurance : Défense \
+➕ Potion d'Invisibilité : Défense \
+➕ Potion de Force : Attaque \
+➕ Breuvage de Lévitation : Vitesse \
+➕ Élixir d'Aiguisage : Précision \
+➕ Potion de Guérison Rapide : Soins \
+➕ Tonique de Robustesse : Défense \
+➕ Élixir d'Agilité : Vitesse \
+➕ Potion de Puissance : Attaque \
+➕ Fiole de Précision : Précision \
+➕ Potion de Résistance : Défense \
+➕ Élixir de Rapidité : Vitesse \
+➕ Philtre d'Enchâssement : Précision \
+➕ Potion de Rajeunissement : Soins \
+➕ Breuvage de Bouclier Magique : Défense \
+➕ Potion de Rage : Attaque \
+➕ Élixir d'Évasion : Vitesse \
+➕ Potion de Percée : Précision \
+➕ Fiole de Guérison : Soins \
+➕ Tonique d'Invulnérabilité : Défense \
+➕ Potion d'Éclair : Attaque \
+➕ Potion de Déplacement Rapide : Vitesse \
+➕ Élixir de Visée : Précision \
+➕ Breuvage de Guérison Totale : Soins \
