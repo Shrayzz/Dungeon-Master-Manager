@@ -1,0 +1,51 @@
+@keyframes bgAnimation {
+    0% {
+        background-image: linear-gradient(45deg, #9c7070 20%, #aa6969 80%);
+    }
+    50% {
+        background-image: linear-gradient(45deg, #c37575 20%, #8f5a5a 80%);
+    }
+    100% {
+        background-image: linear-gradient(45deg, #9c7070 20%, #aa6969 80%);
+    }
+}
+
+* {
+    user-select: none;
+}
+
+html, body {
+    overflow-y: hidden;
+    height: 100vh; 
+    margin: 0; 
+    animation: bgAnimation 60s infinite ease;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-app-region: no-drag;
+}
+
+.window > .titleBar {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+    height: 40px;
+}
+
+.titleBar > .applicationName {
+    border: solid black 2px;
+    width: 91vw;
+    -webkit-app-region: drag;
+}
+.titleBar > .titleBarButtons {
+    border: dashed blue 1px;
+    width: 9vw;
+    -webkit-app-region: no-drag;
+}
+
+.window > .main {
+    height: 96vh;
+}
