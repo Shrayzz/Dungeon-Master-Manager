@@ -6,6 +6,24 @@
     font-family: 'Inter-Light';
     src: url('../fonts/Inter-Light.ttf');
 }
+@keyframes map-moving {
+    0% {
+        background-position-x: 3%;
+        background-position-y: 3%;
+    }
+    50% {
+        background-position-x: 71%;
+        background-position-y: 87%;
+    }
+    80% {
+        background-position-x: 19%;
+        background-position-y: 82%;
+    }
+    80% {
+        background-position-x: 3%;
+        background-position-y: 3%;
+    }
+}
 
 .menu {
     height: 7vh;
@@ -31,4 +49,62 @@
 .missionBtn:not(hover), .characterBtn:not(hover), .itemBtn:not(hover) {
     background-color: transparent;
     transition: background-color 0.3s;
+}
+
+#missions-main {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content : center;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.missions-main-void1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    left: 5vw;
+    width: 26.2vw;
+    height: 92vh;
+    /* border: solid 2px blue; */
+}
+
+.square {
+    width: 25vw;
+    height: 25vw;
+
+    border: aliceblue 6px solid;
+    position: absolute;
+    background-image: url('../imgs/missions-map.png');
+    background-size: 450%;
+    animation: map-moving 110s ease-in-out infinite;
+}
+
+.descSquare {
+    text-align: justify;    
+    position: absolute;
+    top: 26vw;
+    color: aliceblue;
+    font-family: 'Inter-Light';
+    font-size: 1.4vw;
+}
+
+.rewards {
+    position: absolute;
+    top : 36.5vw;
+    text-align: justify;
+    color: aliceblue;
+    font-family: 'Inter-Light';
+    font-size: 1.4vw;
+}
+
+/* TODO: a finir */
+
+.separator {
+    display: flex;
+    border: solid 1px #ff0000;
+    height: 80vh;
+    width: 1vw;
 }
