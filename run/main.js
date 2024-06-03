@@ -7,7 +7,8 @@ const createMainWindow = () => {
         width: 1000,
         height: 600,
         minWidth: 640,
-        minHeight: 480,
+        minHeight: 480,     
+        fullscreenable: true,
         frame: false,
         icon: path.join(__dirname, '../Dungeon-Master-Manager.ico'),
         webPreferences: {
