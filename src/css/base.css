@@ -9,7 +9,7 @@
 
 html, body {
     overflow: hidden;
-    background-image: linear-gradient(45deg, #040207 20%, #170c27 80%);
+    background-image: linear-gradient(45deg, #232323 20%, #202020 90%);
     padding: 0;
     margin: 0;
 }
@@ -26,7 +26,8 @@ html, body {
     display: flex;
     flex-direction: row;
     height: 40px;
-    
+    background-color: black;
+    opacity: 0.5;
 }
 
 .leftSide {
