@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,35 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
     <div class="window">
         <div class="titleBar">
             <div class="leftSide">
-                <div class="applicationName">Home</div>
+                <div class="applicationName">DMM</div>
             </div>
             <div class="titleBarButtons"></div>
         </div>
         <div class="main">
-            <h2 class="Welcome">Welcome to</h2>
-            <h1 class="mainTitle"> Dungeon Master Manager !</h1>
-            <button class="secondButton githubButton">GitHub</a></button>
-            <button class="mainButton">Launch Game</button>
-            <button class="secondButton htpButton">How to Play ?</button>
+            <div class="void1">
+                <h2 class="welcome">Welcome to</h2>
+                <h1 class="mainTitle">Dungeon Master Manager</h1>
+            </div>
+            <div class="void2">
+                <button class="secondButton githubButton" onclick="openGithub()">GitHub</button>
+                <button class="mainButton" onclick="window.location.href='menu.html';">Launch Game</button>
+                <button class="secondButton htpButton" onclick="openTutorial()">How to Play ?</button>
+            </div>
+            <script>
+                function openGithub() {
+                    window.open("https://github.com/Shrayzz/Dungeon-Master-Manager", "_blank");
+                }
+                function openTutorial() {
+                    window.open("https://github.com/Shrayzz/Dungeon-Master-Manager/blob/main/TUTORIAL.md", "_blank");
+                }
+            </script>
         </div>
     </div>
 </body>
+
 </html>
