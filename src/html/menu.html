@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/missions.css">
     <link rel="stylesheet" href="../css/menu.css">
+
+    <script src="../js/displayWindow.js"></script>
 </head>
+
 <body>
     <div class="window">
         <div class="titleBar">
@@ -21,15 +25,26 @@
             <button class="characterBtn">Characters</button>
             <button class="itemBtn">Items</button>
         </div>
-        <div id="missions-main bright">
-
+        <div id="missions-main" class="main visible">
+            <div class="missions-main-void1"> 
+                <div class="square"><!-- TODO : Générer avec JSON --></div>
+                <h4 class="descSquare"><!-- TODO : Générer avec JSON --> <u>Description :</u> <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</h4>
+                <h3 class="rewards"><!-- TODO : Générer avec JSON --><u>Rewards :</u> <br>
+                    <ul>
+                        <li>Lorem Ipsum</li>
+                        <li>dummy text</li>
+                        <li>typesetting industry</li>
+                    </ul> </h3>
+            </div>
+            <div class="separator1"></div>
         </div>
-        <div id="character-main moody">
-            
+        <div id="character-main" class="main hidden">
+            <h1>Lorem ipsum placeholder</h1> <!-- Placeholder -->
         </div>
-        <div id="item-main moody">
-            
+        <div id="item-main" class="main hidden">
+            <h1>Lorem ipsum placeholder</h1> <!-- Placeholder -->
         </div>
     </div>
 </body>
+
 </html>
