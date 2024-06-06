@@ -68,7 +68,7 @@
     left: 5vw;
     width: 26.2vw;
     height: 92vh;
-    border: solid 2px red;
+    /* border: solid 2px red; */
 }
 
 .square {
@@ -77,7 +77,7 @@
 
     border: aliceblue 6px solid;
     position: absolute;
-    /* background-image: url('../imgs/missions-map.png'); */
+    background-image: url('../imgs/missions-map.png');
     background-size: 450%;
     animation: map-moving 110s ease-in-out infinite;
 }
@@ -112,7 +112,7 @@
 .missions-main-void2 {
     display: flex;
     flex-direction: row;
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     height: 35vh;
     width: 65vw;
 
@@ -126,6 +126,7 @@
 .personnage1, .personnage2 {
     display: flex;
     flex-direction :row;
+    margin-left: 2vw;
 }
 .pers1Infos, .pers2Infos {
     display: flex;
@@ -133,11 +134,12 @@
     align-items: flex-start;
     width: 15vw;
     height: 35vh;
-    border: solid 1px green;
+    /* border: solid 1px green; */
     line-height: 0;
     font-family: 'Inter-ExtraBold';
     font-size: 12px;
     color: aliceblue;
+    margin-left: 2vw;
 }
 .pers1Infos h5, .pers2Infos h5 {
     font-family: 'Inter-ExtraBold';
@@ -145,9 +147,38 @@
     color: aliceblue;
 }
 
-.personnage3 {
-    opacity: 0;
+.missions-main-void3 {
+    display: flex;
+    flex-direction: row;
+    /* border: solid 1px blue; */
+    height: 35vh;
+    width: 65vw;
+
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
 }
-.personnage4 {
-    opacity: 0;
+
+.personnage3, .personnage4 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vw;
+}
+.pers3Infos, .pers4Infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 15vw;
+    height: 35vh;
+    /* border: solid 1px green; */
+    line-height: 0;
+    font-family: 'Inter-ExtraBold';
+    font-size: 12px;
+    color: aliceblue;
+    margin-left: 2vw;
+}
+.pers3Infos h5, .pers4Infos h5 {
+    font-family: 'Inter-ExtraBold';
+    font-size: 15px;
+    color: aliceblue;
 }
