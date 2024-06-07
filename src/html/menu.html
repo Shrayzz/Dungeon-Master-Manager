@@ -21,26 +21,27 @@
             <div class="titleBarButtons"></div>
         </div>
         <div class="menu">
-            <button class="missionBtn">Missions</button>
-            <button class="characterBtn">Characters</button>
-            <button class="itemBtn">Items</button>
+            <button class="missionBtn squareSec visible">Missions</button>
+            <button class="characterBtn squareSec visible">Characters</button>
+            <button class="itemBtn squareSec visible">Items</button>
         </div>
         <div id="missions-main" class="main visible">
             <div class="missions-main-void1">
-                <div class="square"><!-- TODO : Générer avec JSON --></div>
-                <h4 class="descSquare"><!-- TODO : Générer avec JSON --> <u>Description :</u> <br>Lorem Ipsum is simply
-                    dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                    dummy text ever.</h4>
-                <h3 class="rewards"><!-- TODO : Générer avec JSON --><u>Rewards :</u> <br>
+                <button id="squareBtn" class="bigSquare" onclick="showMap()"></button>
+                <button id="backMapButton" class="squareSec hidden"></button>
+                <div id="square" class="closeMap"><!-- TODO : Générer avec JSON --></div>
+                <h4 class="descSquare squareSec visible"><!-- TODO : Générer avec JSON --> 
+                    <u>Description :</u> <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</h4>
+                <h3 class="rewards squareSec visible"><!-- TODO : Générer avec JSON --><u>Rewards :</u> <br>
                     <ul>
                         <li>Lorem Ipsum</li>
                         <li>dummy text</li>
                         <li>typesetting industry</li>
                     </ul>
                 </h3>
-                <div class="separator1"></div>
+                <div class="separator1 squareSec visible"></div>
             </div>
-            <div class="missions-main-void2">
+            <div class="missions-main-void2 squareSec visible">
                 <div class="personnage1">
                     <img src="../imgs/man.png" alt="personnage1">
                     <div class="pers1Infos">
@@ -74,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="missions-main-void3">
+            <div class="missions-main-void3 squareSec visible">
                 <div class="personnage3">
                     <img src="../imgs/woman.png" alt="personnage3">
                     <div class="pers3Infos">

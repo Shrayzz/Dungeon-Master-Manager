@@ -8,20 +8,20 @@
 }
 @keyframes map-moving {
     0% {
-        background-position-x: 3%;
-        background-position-y: 3%;
+        background-position-x: 50%;
+        background-position-y: 50%;
     }
     50% {
-        background-position-x: 71%;
-        background-position-y: 87%;
+        background-position-x: 80%;
+        background-position-y: 80%;
     }
     80% {
-        background-position-x: 19%;
-        background-position-y: 82%;
+        background-position-x: 30%;
+        background-position-y: 10%;
     }
-    80% {
-        background-position-x: 3%;
-        background-position-y: 3%;
+    100% {
+        background-position-x: 50%;
+        background-position-y: 50%;
     }
 }
 
@@ -71,15 +71,107 @@
     /* border: solid 2px red; */
 }
 
-.square {
+.closeMap {
     width: 25vw;
     height: 25vw;
-
     border: aliceblue 6px solid;
     position: absolute;
     background-image: url('../imgs/missions-map.png');
     background-size: 450%;
-    animation: map-moving 110s ease-in-out infinite;
+    animation: map-moving 90s ease-in-out infinite;
+    transition: all 1s cubic-bezier(0.81, 0.09, 0.11, 0.83);
+    color: transparent;
+}
+
+.openMap {
+    width: 50vw;
+    height: 50vw;
+    border: aliceblue 4px solid;
+    transform: translate(38vw, -2.85vh);
+    background-image: url('../imgs/missions-map.png');
+    background-size: 100%;
+    animation: map-moving 90s ease-in-out infinite;
+    transition: all 1s cubic-bezier(0.81, 0.09, 0.11, 0.83);
+}
+
+.littleSquare {
+    position: absolute;
+    top: 800%;
+    animation: position 1s;
+}
+
+.bigSquare {
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    left: 0.38vw;
+    top: 0.38vw;
+    z-index: 2;
+    opacity: 1;
+}
+
+#squareBtn, #squareBtn:not(:hover) {
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+#squareBtn:hover {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#backMapButton, #backMapButton:not(hover) {
+    background-image: url('../imgs/back.png');
+    background-size: 100%;
+    position: absolute;
+    left: -2vw;
+    top: -3vh;
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: solid 2px aliceblue;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+#backMapButton:hover {
+    background-color: #040207;
+    cursor: pointer;
+    rotate: -15deg;
+    transition: all 0.3s;
+}
+
+@keyframes retardedShow {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.visible {
+    opacity: 1;
+    transform: scale(1);
+    animation: retardedShow 1.5s;
+    z-index: 1;
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s;
+    z-index: -999;
 }
 
 .descSquare {
