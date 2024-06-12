@@ -29,5 +29,21 @@ namespace Dungeon_Master_Manager.view
         {
             MessageBox.Show("Image clicked!"); // Placeholder
         }
+        private void Image_Loaded(object sender, RoutedEventArgs e)
+        {
+            var image = sender as Image;
+            if (image != null)
+            {
+                if (image.Source == null)
+                {
+                    MessageBox.Show($"Image source is null. Check the image path. {image.Source}");
+                }
+            }
+        }
+
+        private void Image_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,14 +7,40 @@
       mc:Ignorable="d" 
       Title="Missions">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Column="0">
             <StackPanel Orientation="Vertical">
                 <Border BorderBrush="Gray" BorderThickness="2" Margin="10">
-                    <Image Source="../assets/missions-map.png" Width="100" Height="100" MouseDown="Image_MouseDown"/>
+                    <Image Source="../assets/missions-map.png" Width="300" Height="300" MouseDown="Image_MouseDown" Loaded="Image_Loaded"/>
                 </Border>
                 <TextBlock Text="Description" Margin="10"/>
+                <TextBlock x:Name="DescriptionTextBlock" Margin="10" Height="100" TextWrapping="Wrap"/>
                 <TextBlock Text="Rewards" Margin="10"/>
+                <TextBlock x:Name="RewardsTextBlock" Margin="10" Height="100" TextWrapping="Wrap"/>
             </StackPanel>
         </Border>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Stretch">
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="10" HorizontalAlignment="Stretch">
+                <TextBlock Text="Or possédé : 1000" Margin="10" HorizontalAlignment="Center"/>
+            </Border>
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="10" VerticalAlignment="Stretch">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Source="../assets/man.png" Width="50" Height="50" Margin="10" Loaded="Image_Loaded"/>
+                        <Image Source="../assets/man.png" Width="50" Height="50" Margin="10" Loaded="Image_Loaded"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Source="../assets/man.png" Width="50" Height="50" Margin="10" Loaded="Image_Loaded"/>
+                        <Image Source="../assets/man.png" Width="50" Height="50" Margin="10" Loaded="Image_Loaded"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Button Content="Partir en mission" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" Height="50"/>
+        </StackPanel>
     </Grid>
 </Page>
