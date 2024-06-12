@@ -20,5 +20,11 @@ namespace Dungeon_Master_Manager.view
         {
             InitializeComponent();
         }
+        private void LaunchGame_Click(object sender, RoutedEventArgs e)
+        {
+            view.Game game = new view.Game();
+            game.Show();
+            this.Close();
+        }
     }
 }

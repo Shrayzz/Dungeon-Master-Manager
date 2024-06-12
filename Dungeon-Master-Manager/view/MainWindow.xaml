@@ -8,11 +8,11 @@
         Title="DMM" Height="300" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Dungeon Master Manager" FontSize="36" FontWeight="Bold" Margin="0,0,0,50" HorizontalAlignment="Center"/>
+            <TextBlock Text="Dungeon Master Manager" FontSize="40" FontWeight="Bold" Margin="0,0,0,35" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="GitHub" Width="100" Margin="5"/>
-                <Button Content="Launch Game" Width="100" Margin="5"/>
-                <Button Content="How to play?" Width="100" Margin="5"/>
+                <Button Content="GitHub" Width="150" Height="50" Margin="20"/>
+                <Button Content="Launch Game" Width="150" Height="60" Margin="20" Click="LaunchGame_Click"/>
+                <Button Content="How to play?" Width="150" Height="50" Margin="20"/>
             </StackPanel>
         </StackPanel>
     </Grid>
