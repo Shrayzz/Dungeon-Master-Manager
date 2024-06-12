@@ -7,7 +7,39 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="view\Characters.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Credits.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Game.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Items.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Missions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="view\Characters.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\Credits.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\Game.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\Items.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="view\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\Missions.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

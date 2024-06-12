@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dungeon-Master-Manager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45894570b5d02c819897cbe692393bb6ddd95d71")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dungeon-Master-Manager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dungeon-Master-Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

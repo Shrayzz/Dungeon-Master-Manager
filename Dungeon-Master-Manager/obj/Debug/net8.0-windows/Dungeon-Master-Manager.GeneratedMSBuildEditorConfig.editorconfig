@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dungeon_Master_Manager
-build_property.ProjectDir = C:\Users\axelm\Documents\Workspaces\DMM\DMM\Dungeon-Master-Manager\
+build_property.ProjectDir = C:\Users\axelm\Documents\GitHub\Dungeon-Master-Manager\Dungeon-Master-Manager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

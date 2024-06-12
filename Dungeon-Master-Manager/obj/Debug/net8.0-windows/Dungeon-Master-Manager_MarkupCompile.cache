@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\axelm\Documents\Workspaces\DMM\DMM\Dungeon-Master-Manager\obj\Debug\net8.0-windows\
+C:\Users\axelm\Documents\GitHub\Dungeon-Master-Manager\Dungeon-Master-Manager\obj\Debug\net8.0-windows\
 Dungeon_Master_Manager
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\axelm\Documents\Workspaces\DMM\DMM\Dungeon-Master-Manager\App.xaml
-1-521423388
+C:\Users\axelm\Documents\GitHub\Dungeon-Master-Manager\Dungeon-Master-Manager\App.xaml
+61068642813
 
-4-1948841218
+91706507198
 198915248976
-view\MainWindow.xaml;
+view\Characters.xaml;view\Credits.xaml;view\Game.xaml;view\Items.xaml;view\MainWindow.xaml;view\Missions.xaml;
 
 False
 

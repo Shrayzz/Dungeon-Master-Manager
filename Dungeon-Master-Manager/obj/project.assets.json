@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\axelm\\Documents\\Workspaces\\DMM\\DMM\\Dungeon-Master-Manager\\Dungeon-Master-Manager.csproj",
+      "projectUniqueName": "C:\\Users\\axelm\\Documents\\GitHub\\Dungeon-Master-Manager\\Dungeon-Master-Manager\\Dungeon-Master-Manager.csproj",
       "projectName": "Dungeon-Master-Manager",
-      "projectPath": "C:\\Users\\axelm\\Documents\\Workspaces\\DMM\\DMM\\Dungeon-Master-Manager\\Dungeon-Master-Manager.csproj",
+      "projectPath": "C:\\Users\\axelm\\Documents\\GitHub\\Dungeon-Master-Manager\\Dungeon-Master-Manager\\Dungeon-Master-Manager.csproj",
       "packagesPath": "C:\\Users\\axelm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\axelm\\Documents\\Workspaces\\DMM\\DMM\\Dungeon-Master-Manager\\obj\\",
+      "outputPath": "C:\\Users\\axelm\\Documents\\GitHub\\Dungeon-Master-Manager\\Dungeon-Master-Manager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\axelm\\AppData\\Roaming\\NuGet\\NuGet.Config",
