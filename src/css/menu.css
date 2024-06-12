@@ -274,3 +274,71 @@
     font-size: 15px;
     color: aliceblue;
 }
+
+.missions-main-void4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40vw;
+    top: 77vh;
+}
+
+.missions-main-void4-part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.xpLevel {
+    display: flex;
+    position: relative;
+    background-color: #040207;
+    border: solid 5px aliceblue;
+    border-radius: 60px;
+    width: 9vh;
+    height: 9vh;
+}
+.xpBar {
+    display: flex;
+    position: absolute;
+    left: -0vh;
+    background-color: #040207;
+    border: solid 5px aliceblue;
+    border-radius: 60px;
+    width: 45vh;
+    height: 3vh;
+    z-index: -1;
+}
+
+.missions-main-void4-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#launchMission, #launchMission:not(hover) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 37vw;
+    transition: all 0.2s;
+
+    width: 15vw;
+    height: 9vh;
+    font-family: 'Inter-ExtraBold';
+    font-size: 3vh;
+    color: aliceblue;
+    background-color: transparent;
+    border: solid 5px aliceblue;
+    border-radius: 30px;
+}
+
+#launchMission:hover {
+    background-color: #040207;
+    cursor: pointer;
+    transition: all 0.2s;
+}
