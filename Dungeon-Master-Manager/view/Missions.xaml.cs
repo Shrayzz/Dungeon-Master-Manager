@@ -25,25 +25,10 @@ namespace Dungeon_Master_Manager.view
             InitializeComponent();
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Image_OpenMissionsDetails(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Image clicked!"); // Placeholder
-        }
-        private void Image_Loaded(object sender, RoutedEventArgs e)
-        {
-            var image = sender as Image;
-            if (image != null)
-            {
-                if (image.Source == null)
-                {
-                    MessageBox.Show($"Image source is null. Check the image path. {image.Source}");
-                }
-            }
-        }
-
-        private void Image_Loaded_1(object sender, RoutedEventArgs e)
-        {
-
+            view.Map map = new view.Map();
+            map.Show();
         }
     }
 }
