@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Dungeon_Master_Manager.view"
       mc:Ignorable="d"
-      d:DesignHeight="300" d:DesignWidth="600"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="Missions">
     <Grid>
         <Grid.RowDefinitions>
@@ -31,12 +31,14 @@
                        FontSize="20">
                     Selecteur de mission
                 </Label>
-                <Viewbox Grid.Row="1" MinWidth="400" MaxWidth="600" MaxHeight="600" Stretch="Uniform"
+                <Viewbox Grid.Row="1" MinWidth="300" MaxWidth="500" MaxHeight="500" Stretch="Uniform"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center">
-                    <Image Source="../assets/missions-map.png" Cursor="Hand"
+                    <Border BorderBrush="Gray" BorderThickness="2" Margin="10">
+                        <Image Source="../assets/missions-map.png" Cursor="Hand"
                            HorizontalAlignment="Left"
                            MouseDown="Image_OpenMissionsDetails" />
+                    </Border>
                 </Viewbox>
             </Grid>
             <Grid Grid.Column="1">
@@ -46,19 +48,18 @@
                     <RowDefinition Height="0.4*" />
 
                 </Grid.RowDefinitions>
-                <Label Margin="0 5" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center"
-                       FontSize="20">
-                    Détail de la mission
+                <Label FontWeight="Black" VerticalAlignment="Top" HorizontalAlignment="Center"
+                       FontSize="20" Height="37" Margin="0,11,0,0" Grid.RowSpan="2">
+                    Détails de la mission
                 </Label>
                 <Viewbox Grid.Row="1" Stretch="Uniform" >
                     <TextBlock MaxWidth="400" MaxHeight="400" MinWidth="200" TextWrapping="Wrap"
-                               HorizontalAlignment="Center"
-                               Margin="0 0 10 0">
+                               HorizontalAlignment="Center" Width="377">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt enim, sed varius erat. Suspendisse potenti. Aliquam rhoncus magna sit amet condimentum semper. Fusce lobortis eget metus a varius. Proin ligula sapien, tristique ut imperdiet eget, cursus eget massa. Donec nec fringilla neque, vitae efficitur erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget elit id tortor porta tincidunt et et libero. Nam ipsum augue, accumsan eget magna sit amet, egestas sagittis nibh. Etiam molestie volutpat lectus eu varius.
                     </TextBlock>
                 </Viewbox>
                 <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button MinHeight="30" Padding="10">Partir à l'aventure (simuler)</Button>
+                    <Button Height="50" Width="200" FontSize="15" Padding="10">Partir à l'aventure (simuler)</Button>
                 </Grid>
 
             </Grid>
