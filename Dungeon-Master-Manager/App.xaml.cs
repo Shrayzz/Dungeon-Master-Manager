@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.Linq; // for the Append method
 using System.Windows;
+using System.Windows.Controls;
 using Dungeon_Master_Manager.view;
 using Dungeon_Master_Manager.model;
 
@@ -18,7 +20,7 @@ namespace Dungeon_Master_Manager
         /// <summary>
         /// All the map's missions
         /// </summary>
-        private Mission[] missions = [];
+        private List<Mission> missions = [];
 
         /// <summary>
         /// What is the player trying to do ?
@@ -59,9 +61,10 @@ namespace Dungeon_Master_Manager
             get { return team; }
         }
 
-        public Mission[] Missions
+        public List<Mission> Missions
         {
             get { return missions; }
+            set { missions = value; }
         }
 
         public Monster[] Monsters
@@ -69,6 +72,18 @@ namespace Dungeon_Master_Manager
             get { return monsters; }
         }
 
+        public void SelectMission(uint mission_index)
+        {
+            SelectedMission = mission_index;
+            Trace.WriteLine(Missions[(int)SelectedMission].Name);
+        }
+        
+        public void SelectMissionEvent(Object? caller, EventArgs e)
+        {
+            uint mission_id = Convert.ToUInt32(((Button)caller).Tag);
+            SelectMission(mission_id);
+        }
+        
         /// <summary>
         /// Simulates the selected mission
         /// </summary>

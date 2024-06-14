@@ -1,9 +1,10 @@
 ﻿<Application x:Class="Dungeon_Master_Manager.App"
+             x:Name="DMM"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Dungeon_Master_Manager"
              >
     <Application.Resources>
-         
+        
     </Application.Resources>
 </Application>

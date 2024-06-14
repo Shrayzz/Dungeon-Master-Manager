@@ -1,0 +1,779 @@
+﻿[
+  {
+    "name": "Mission One",
+    "description": "This is the first mission.",
+    "marginTop": 0,
+    "marginBottom": 0,
+    "marginRight": 0,
+    "marginLeft": 0,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Two",
+    "description": "Description for Mission Two.",
+    "marginTop": 26,
+    "marginBottom": 260,
+    "marginRight": 247,
+    "marginLeft": 39,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Three",
+    "description": "Description for Mission Three.",
+    "marginTop": 10,
+    "marginBottom": 279,
+    "marginRight": 21,
+    "marginLeft": 268,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Four",
+    "description": "Description for Mission Four.",
+    "marginTop": 57,
+    "marginBottom": 232,
+    "marginRight": 126,
+    "marginLeft": 163,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Five",
+    "description": "Description for Mission Five.",
+    "marginTop": 88,
+    "marginBottom": 201,
+    "marginRight": 78,
+    "marginLeft": 211,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Six",
+    "description": "Description for Mission Six.",
+    "marginTop": 88,
+    "marginBottom": 201,
+    "marginRight": 37,
+    "marginLeft": 252,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Seven",
+    "description": "Description for Mission Seven.",
+    "marginTop": 126,
+    "marginBottom": 163,
+    "marginRight": 58,
+    "marginLeft": 231,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Eight",
+    "description": "Description for Mission Eight.",
+    "marginTop": 26,
+    "marginBottom": 260,
+    "marginRight": 247,
+    "marginLeft": 39,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Nine",
+    "description": "Description for Mission Nine.",
+    "marginTop": 147,
+    "marginBottom": 142,
+    "marginRight": 103,
+    "marginLeft": 186,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Ten",
+    "description": "Description for Mission Ten.",
+    "marginTop": 108,
+    "marginBottom": 181,
+    "marginRight": 156,
+    "marginLeft": 133,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Eleven",
+    "description": "Description for Mission Eleven.",
+    "marginTop": 88,
+    "marginBottom": 201,
+    "marginRight": 205,
+    "marginLeft": 84,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Twelve",
+    "description": "Description for Mission Twelve.",
+    "marginTop": 137,
+    "marginBottom": 152,
+    "marginRight": 195,
+    "marginLeft": 94,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Thirteen",
+    "description": "Description for Mission Thirteen.",
+    "marginTop": 150,
+    "marginBottom": 138,
+    "marginRight": 160,
+    "marginLeft": 129,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Fourteen",
+    "description": "Description for Mission Fourteen.",
+    "marginTop": 191,
+    "marginBottom": 98,
+    "marginRight": 55,
+    "marginLeft": 234,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Fifteen",
+    "description": "Description for Mission Fifteen.",
+    "marginTop": 194,
+    "marginBottom": 94,
+    "marginRight": 107,
+    "marginLeft": 182,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Sixteen",
+    "description": "Description for Mission Sixteen.",
+    "marginTop": 180,
+    "marginBottom": 109,
+    "marginRight": 268,
+    "marginLeft": 21,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Seventeen",
+    "description": "Description for Mission Seventeen.",
+    "marginTop": 191,
+    "marginBottom": 98,
+    "marginRight": 195,
+    "marginLeft": 94,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Eighteen",
+    "description": "Description for Mission Eighteen.",
+    "marginTop": 240,
+    "marginBottom": 49,
+    "marginRight": 148,
+    "marginLeft": 141,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Nineteen",
+    "description": "Description for Mission Nineteen.",
+    "marginTop": 250,
+    "marginBottom": 39,
+    "marginRight": 223,
+    "marginLeft": 66,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Twenty",
+    "description": "Description for Mission Twenty.",
+    "marginTop": 279,
+    "marginBottom": 10,
+    "marginRight": 279,
+    "marginLeft": 10,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  },
+  {
+    "name": "Mission Twenty-One",
+    "description": "Description for Mission Twenty-One.",
+    "marginTop": 246,
+    "marginBottom": 42,
+    "marginRight": 41,
+    "marginLeft": 248,
+    "reward_gold": 500,
+    "monsters": [
+      {
+        "health": 20,
+        "weakness": 0,
+        "resistance": 0,
+        "weaknessPercent": 0,
+        "resistancePercent": 0
+      }
+    ],
+    "reward_items": [
+      {
+        "name": "Rewarded item test",
+        "description": "An item to test the mission json parsing",
+        "type": 0,
+        "range": 0,
+        "value": 2
+      }
+    ],
+    "reward_characters": [
+      {
+        "name": "Test Daniel",
+        "element": 0,
+        "acceptedWeapons": 0,
+        "weapon": null,
+        "inventory": [],
+        "health": 30
+      }
+    ]
+  }
+]

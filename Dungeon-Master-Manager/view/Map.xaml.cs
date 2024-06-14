@@ -1,6 +1,7 @@
 ﻿using Dungeon_Master_Manager.model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -26,16 +27,31 @@ namespace Dungeon_Master_Manager.view
         public Map()
         {
             InitializeComponent();
-            LoadButtons();
+            LoadMissions();
         }
-        private void LoadButtons()
+        private void LoadMissions()
         {
-            string jsonString = File.ReadAllText("../assets/missions.json");
-            var missions = JsonSerializer.Deserialize<Dictionary<string, Mission>>(jsonString);
+            string jsonString = File.ReadAllText("../../../assets/missions.json");
+            ((App)Application.Current).Missions = JsonSerializer.Deserialize<List<model.Mission>>(jsonString);
+            
+            if (((App)Application.Current).Missions.Count == 0) return;
 
-            int index = 1;
-            // Ajouter la récupération des buttons concernant les missions
-            // Syncroniser les index par rapport aux JSON
+            for (int i=0;i<((App)Application.Current).Missions.Count;i++)
+            {
+                model.Mission m = ((App)Application.Current).Missions[i];
+                Button b = new Button();
+                b.Style = (Style)this.Resources["MissionDot"];
+                b.Width = 7;
+                b.Height = 7;
+                b.Tag = i.ToString();
+                
+                b.Margin = new Thickness(m.MarginLeft, m.MarginTop, m.MarginRight, m.MarginBottom);
+                b.Click += ((App)Application.Current).SelectMissionEvent;
+                MapDots.Children.Add(b);
+
+            }
+
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

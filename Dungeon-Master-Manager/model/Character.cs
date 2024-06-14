@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Dungeon_Master_Manager.model
 {
@@ -11,46 +12,38 @@ namespace Dungeon_Master_Manager.model
         /// <summary>
         /// A cute name for the character
         /// </summary>
-        public string Name { get; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// What element does the character master
         /// </summary>
-        public Element Element { get; }
+        [JsonPropertyName("element")]
+        public Element Element { get; set; }
 
         /// <summary>
         /// What kind of weapons the character can wield
         /// </summary>
-        public WeaponClass AcceptedWeapons { get; }
+        [JsonPropertyName("acceptedWeapons")]
+        public WeaponClass AcceptedWeapons { get; set; }
 
         /// <summary>
         /// User's weapon
         /// </summary>
-        private Item? weapon;
-        public Item? Weapon
-        {
-            get { return weapon; }
-            private set { weapon = value; }
-        }
+        [JsonPropertyName("weapon")]
+        public Item? Weapon { get; set; }
 
         /// <summary>
         /// The items the character has equipped
         /// </summary>
-        private List<Item> inventory;
-        public IReadOnlyList<Item> Inventory
-        {
-            get { return inventory.AsReadOnly(); }
-        }
+        [JsonPropertyName("inventory")]
+        public List<Item> Inventory { get; set; }
 
         /// <summary>
         /// Percentage of health left
         /// </summary>
-        private uint health;
-        public uint Health
-        {
-            get { return health; }
-            private set { health = value; }
-        }
+        [JsonPropertyName("health")]
+        public uint Health { get; set; }
 
         /// <summary>
         /// Creates a new character
@@ -60,23 +53,24 @@ namespace Dungeon_Master_Manager.model
             this.Name = name;
             this.Element = element;
             this.AcceptedWeapons = class_;
-            this.health = 20;
-            this.inventory = new List<Item>();
+            this.Health = 20;
+            this.Inventory = new List<Item>();
         }
 
+        public Character() { }
         /// <summary>
         /// Damages the character by a given amount
         /// </summary>
         public void Damage(uint amount)
         {
 
-            if (amount >= health)
+            if (amount >= Health)
             {
-                health = 0;
+                Health = 0;
             }
             else
             {
-                health -= amount;
+                Health -= amount;
             }
         }
 
@@ -85,10 +79,10 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public void Heal(uint amount)
         {
-            health += amount;
-            if (health > 20)
+            Health += amount;
+            if (Health > 20)
             {
-                health = 20;
+                Health = 20;
             }
         }
 
@@ -97,7 +91,7 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public void Equip(Item item)
         {
-            if (inventory.Contains(item))
+            if (Inventory.Contains(item))
             {
                 throw new InvalidOperationException("Item is already equipped.");
             }
@@ -107,11 +101,11 @@ namespace Dungeon_Master_Manager.model
                 throw new InvalidOperationException("This character cannot wield this weapon.");
             }
 
-            inventory.Add(item);
+            Inventory.Add(item);
 
             if (item.Type == ItemType.Weapon)
             {
-                weapon = item;
+                Weapon = item;
             }
         }
 
@@ -120,16 +114,16 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public void UnEquip(Item item)
         {
-            if (!inventory.Contains(item))
+            if (!Inventory.Contains(item))
             {
                 throw new InvalidOperationException("Item is not equipped.");
             }
 
-            inventory.Remove(item);
+            Inventory.Remove(item);
 
-            if (item == weapon)
+            if (item == Weapon)
             {
-                weapon = null;
+                Weapon = null;
             }
         }
 
@@ -138,7 +132,7 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public void Attack(Monster monster)
         {
-            if (this.weapon == null) return;
+            if (this.Weapon == null) return;
 
             double multiplier = 1.0;
 
@@ -153,7 +147,7 @@ namespace Dungeon_Master_Manager.model
             }
 
             // Apply weapon value to the multiplier
-            multiplier *= this.weapon.Value;
+            multiplier *= this.Weapon.Value;
 
             // Reduce monster's health
             monster.Health = (uint)(monster.Health * multiplier);

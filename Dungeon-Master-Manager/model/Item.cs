@@ -1,68 +1,53 @@
 using System;
+using System.Text.Json.Serialization;
 
-/// <summary>
-/// An object with a specific usage
-/// </summary>
 namespace Dungeon_Master_Manager.model {
+	/// <summary>
+	/// An object with a specific usage
+	/// </summary>
 	public class Item
 	{
 		/// <summary>
 		/// Name of the item
 		/// </summary>
-		private string name;
+		/// [JsonPropertyName("name")]
+		public string Name { get; set; }
 		
-		public string Name
-		{
-			get { return name; }
-		}
 
 		/// <summary>
 		/// Description for the item
 		/// </summary>
-		private string description;
-
-		public string Description
-		{
-			get { return description; }
-		}
+		[JsonPropertyName("description")]
+		public string Description { get; set; }
+		
 
 		/// <summary>
 		/// What kind of item it is, something that can be consumed or something that can damage monsters
 		/// </summary>
-		private ItemType type;
-
-		public ItemType Type
-		{
-			get { return type; }
-		}
+		[JsonPropertyName("type")]
+		public ItemType Type { get; set; }
 
 		/// <summary>
 		/// If the item is a weapon, stores the type of the weapon (range or melee) otherwise stores null
 		/// </summary>
-		private WeaponClass? range;
-
-		public WeaponClass? Range
-		{
-			get { return range; }
-		}
+		[JsonPropertyName("range")]
+		public WeaponClass? Range { get; set; }
+		
 
 		/// <summary>
 		/// The value associated with the item type, may be health regained or weapon damage or something else
 		/// </summary>
-		private int value;
-
-		public int Value
-		{
-			get { return value; }
-		}
+		[JsonPropertyName("value")]
+		public int Value { get; set; }
 		
+		public Item() { }
 		public Item(string name, string description, ItemType type, WeaponClass? range, int value)
 		{
-			this.name = name;
-			this.description = description;
-			this.type = type;
-			this.range = range;
-			this.value = value;
+			this.Name = name;
+			this.Description = description;
+			this.Type = type;
+			this.Range = range;
+			this.Value = value;
 		}
 	}
 }
