@@ -45,7 +45,6 @@ namespace Dungeon_Master_Manager.view
                         case "Characters":
                             ((App)Application.Current).Intent = Intent.View;
                             ContentFrame.Content = new Characters();
-
                             break;
                         case "Items":
                             ((App)Application.Current).Intent = Intent.View;

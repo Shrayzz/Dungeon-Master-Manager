@@ -20,7 +20,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0" Margin="-15,0,15,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height=".2*" />
                     <RowDefinition Height="*" />
@@ -41,7 +41,7 @@
                     </Border>
                 </Viewbox>
             </Grid>
-            <Grid Grid.Column="1">
+            <Grid Grid.ColumnSpan="2" Margin="390,0,10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height=".2*" />
                     <RowDefinition Height="*" />
@@ -53,8 +53,8 @@
                     Détails de la mission
                 </Label>
                 <Viewbox Grid.Row="1" Stretch="Uniform" >
-                    <TextBlock MaxWidth="400" MaxHeight="400" MinWidth="200" TextWrapping="Wrap"
-                               HorizontalAlignment="Center" Width="377">
+                    <TextBlock MaxWidth="400" MaxHeight="350" MinWidth="200" TextWrapping="Wrap"
+                               HorizontalAlignment="Center" VerticalAlignment="Center" Width="193" FontSize="7" Height="89">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in tincidunt enim, sed varius erat. Suspendisse potenti. Aliquam rhoncus magna sit amet condimentum semper. Fusce lobortis eget metus a varius. Proin ligula sapien, tristique ut imperdiet eget, cursus eget massa. Donec nec fringilla neque, vitae efficitur erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget elit id tortor porta tincidunt et et libero. Nam ipsum augue, accumsan eget magna sit amet, egestas sagittis nibh. Etiam molestie volutpat lectus eu varius.
                     </TextBlock>
                 </Viewbox>

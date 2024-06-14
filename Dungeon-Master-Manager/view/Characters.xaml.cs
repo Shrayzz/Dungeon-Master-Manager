@@ -24,5 +24,10 @@ namespace Dungeon_Master_Manager.view
         {
             InitializeComponent();
         }
+        private void OpenCharacter(object sender, MouseButtonEventArgs e)
+        {
+            view.CharacterWindow CharWin = new view.CharacterWindow();
+            CharWin.ShowDialog();
+        }
     }
 }
