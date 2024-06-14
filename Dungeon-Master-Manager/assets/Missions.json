@@ -1,0 +1,13 @@
+﻿{
+  "1": {
+    "name": "Mission One",
+    "description": "This is the first mission.",
+    "rewards": "Reward A"
+  },
+  "2": {
+    "name": "Mission Two",
+    "description": "This is the second mission.",
+    "rewards": "Reward B"
+  }
+  // Placeholders
+}
