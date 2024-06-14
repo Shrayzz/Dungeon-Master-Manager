@@ -72,17 +72,12 @@ namespace Dungeon_Master_Manager
             get { return monsters; }
         }
 
-        public void SelectMission(uint mission_index)
+        public Mission SelectMission(uint mission_index)
         {
             SelectedMission = mission_index;
-            Trace.WriteLine(Missions[(int)SelectedMission].Name);
+            return Missions[(int)SelectedMission];
         }
         
-        public void SelectMissionEvent(Object? caller, EventArgs e)
-        {
-            uint mission_id = Convert.ToUInt32(((Button)caller).Tag);
-            SelectMission(mission_id);
-        }
         
         /// <summary>
         /// Simulates the selected mission

@@ -29,14 +29,15 @@ namespace Dungeon_Master_Manager.view
             InitializeComponent();
             LoadMissions();
         }
+
         private void LoadMissions()
         {
             string jsonString = File.ReadAllText("../../../assets/missions.json");
             ((App)Application.Current).Missions = JsonSerializer.Deserialize<List<model.Mission>>(jsonString);
-            
+
             if (((App)Application.Current).Missions.Count == 0) return;
 
-            for (int i=0;i<((App)Application.Current).Missions.Count;i++)
+            for (int i = 0; i < ((App)Application.Current).Missions.Count; i++)
             {
                 model.Mission m = ((App)Application.Current).Missions[i];
                 Button b = new Button();
@@ -44,28 +45,44 @@ namespace Dungeon_Master_Manager.view
                 b.Width = 7;
                 b.Height = 7;
                 b.Tag = i.ToString();
-                
+
                 b.Margin = new Thickness(m.MarginLeft, m.MarginTop, m.MarginRight, m.MarginBottom);
-                b.Click += ((App)Application.Current).SelectMissionEvent;
+                b.Click += SelectMissionEvent;
                 MapDots.Children.Add(b);
-
             }
-
-            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void SelectMissionEvent(Object? caller, EventArgs e)
         {
-            if (sender is Button button && button.Tag is Mission mission)
+            uint mission_id = Convert.ToUInt32(((Button)caller).Tag);
+            model.Mission m = ((App)Application.Current).SelectMission(mission_id);
+            UIMissionName.Text = "Nom de la mission :" + m.Name;
+            DescriptionTextBlock.Text = m.Description;
+
+            RewardsTextBlock.Text = $"💰 Gold :  {m.RewardGold}\n";
+            RewardsTextBlock.Text += "----------\n";
+            foreach (var i in m.RewardItems)
             {
-                // Insérer les infos dans les boites de texte
+                RewardsTextBlock.Text += i + "\n";
+            }
+            RewardsTextBlock.Text += "----------\n";
+            foreach (var c in m.RewardCharacters)
+            {
+                RewardsTextBlock.Text += c + "\n";
             }
         }
+
+
         public class Mission
         {
             public string? Name { get; set; }
             public string? Description { get; set; }
             public string? Rewards { get; set; }
+        }
+
+        private void MissionViewBackButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

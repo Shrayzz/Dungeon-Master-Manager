@@ -38,7 +38,8 @@
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Vertical" Margin="10" Width="500">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Nom de la mission :" Margin="15" FontWeight="Bold" FontSize="12" />
+                    <TextBlock x:Name="UIMissionName" Text="Nom de la mission :" Margin="15" FontWeight="Bold"
+                               FontSize="12" />
                 </StackPanel>
                 <TextBlock Text="Description" Margin="5" FontWeight="Bold" FontSize="12" />
                 <Border BorderBrush="Gray" BorderThickness="1" Margin="10" HorizontalAlignment="Stretch">
@@ -46,20 +47,21 @@
                 </Border>
                 <TextBlock Text="Rewards" Margin="5" FontWeight="Bold" FontSize="12" />
                 <Border BorderBrush="Gray" BorderThickness="1" Margin="10" HorizontalAlignment="Stretch">
-                    <TextBlock x:Name="RewardsTextBlock" Margin="10" Height="50" TextWrapping="Wrap" />
+                    <ScrollViewer>
+                        <TextBlock x:Name="RewardsTextBlock" Margin="10" Height="200" TextWrapping="Wrap" />
+                    </ScrollViewer>
                 </Border>
                 <StackPanel Orientation="Horizontal" Margin="10">
                     <Button Content="Back" Margin="20" Height="40" Width="70" FontSize="20"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Button Content="Select Mission" Margin="20" Height="40" Width="160" FontSize="20"
-                            HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            HorizontalAlignment="Center" VerticalAlignment="Center" Click="MissionViewBackButtonClick" />
+
                 </StackPanel>
             </StackPanel>
             <Viewbox Stretch="Uniform">
                 <Border BorderBrush="Gray" BorderThickness="2" Margin="10" Width="300" Height="300">
                     <Grid x:Name="MapDots">
                         <Image Source="../assets/missions-map.png" Width="300" Height="300" Cursor="Arrow" />
-                       </Grid>
+                    </Grid>
                 </Border>
             </Viewbox>
         </StackPanel>

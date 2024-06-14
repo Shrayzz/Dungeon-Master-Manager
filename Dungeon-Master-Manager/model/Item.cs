@@ -10,7 +10,7 @@ namespace Dungeon_Master_Manager.model {
 		/// <summary>
 		/// Name of the item
 		/// </summary>
-		/// [JsonPropertyName("name")]
+		[JsonPropertyName("name")]
 		public string Name { get; set; }
 		
 
@@ -48,6 +48,19 @@ namespace Dungeon_Master_Manager.model {
 			this.Type = type;
 			this.Range = range;
 			this.Value = value;
+		}
+		
+		public override string ToString()
+		{
+			string valueTypeDescription = Type == ItemType.Weapon ? "Damage" : "Health";
+			string valueEmoji = Type == ItemType.Weapon ? "⚔️" : "❤️";
+			string rangeText = Range.HasValue ?  $"🏹 Range: {Range.ToString()}\n" : "";
+            
+			return $"🛠️ Item: {Name}\n" +
+			       $"📜 Description: {Description}\n" +
+			       $"🔖 Type: {Type}\n" +
+			       rangeText +
+			       $"{valueEmoji} {valueTypeDescription}: {Value}";
 		}
 	}
 }

@@ -152,6 +152,15 @@ namespace Dungeon_Master_Manager.model
             // Reduce monster's health
             monster.Health = (uint)(monster.Health * multiplier);
         }
+        
+        public override string ToString()
+        {
+
+            return $"👤 Character: {Name}\n" +
+                   $"🌟 Element: {Element}\n" +
+                   $"⚔️ Accepted Weapons: {AcceptedWeapons}\n" +
+                   $"❤️ Health: {Health}\n";
+        }
 
     }
 }
