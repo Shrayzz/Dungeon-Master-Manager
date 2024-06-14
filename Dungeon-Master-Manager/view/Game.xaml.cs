@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dungeon_Master_Manager.model;
 
 namespace Dungeon_Master_Manager.view
 {
@@ -38,15 +39,20 @@ namespace Dungeon_Master_Manager.view
                     switch (selectedTab.Header.ToString())
                     {
                         case "Missions":
+                            ((App)Application.Current).Intent = Intent.View;
                             ContentFrame.Content = new Missions();
                             break;
                         case "Characters":
+                            ((App)Application.Current).Intent = Intent.View;
                             ContentFrame.Content = new Characters();
+
                             break;
                         case "Items":
+                            ((App)Application.Current).Intent = Intent.View;
                             ContentFrame.Content = new Items();
                             break;
                         case "Credits":
+                            ((App)Application.Current).Intent = Intent.View;
                             ContentFrame.Content = new Credits();
                             break;
                     }

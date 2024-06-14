@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,15 @@ namespace Dungeon_Master_Manager.view
         private void Image_OpenMissionsDetails(object sender, MouseButtonEventArgs e)
         {
             view.Map map = new view.Map();
-            map.Show();
+            map.ShowDialog();
         }
+
+        private void PlayerSlot_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            uint pslot = Convert.ToUInt32(((Image)sender).Uid);
+            bool slotEmpty = (string)((Image)sender).Tag == "plus";
+            
+        }
+        
     }
 }

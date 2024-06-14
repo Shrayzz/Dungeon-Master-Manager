@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="assets\man.png" />
     <None Remove="assets\missions-map.png" />
+    <None Remove="assets\plus.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="assets\missions-map.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\plus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
