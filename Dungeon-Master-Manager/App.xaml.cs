@@ -1,5 +1,7 @@
 using System.Diagnostics;
-using System.Linq; // for the Append method
+using System.IO;
+using System.Linq;
+using System.Text.Json; // for the Append method
 using System.Windows;
 using System.Windows.Controls;
 using Dungeon_Master_Manager.view;
@@ -12,11 +14,6 @@ namespace Dungeon_Master_Manager
     /// </summary>
     public partial class App : Application
     {
-        /// <summary>
-        /// The character the player has selected for a mission
-        /// </summary>
-        private Character[] team = [];
-
         /// <summary>
         /// All the map's missions
         /// </summary>
@@ -41,6 +38,7 @@ namespace Dungeon_Master_Manager
         /// The list of all available characters the player recruited
         /// </summary>
         private Character[] characters = [];
+
         public Character[] Characters
         {
             get { return characters; }
@@ -56,10 +54,10 @@ namespace Dungeon_Master_Manager
         /// </summary>
         private Monster[] monsters = [];
 
-        public Character[] Team
-        {
-            get { return team; }
-        }
+        /// <summary>
+        /// The characters the player has selected for a mission
+        /// </summary>
+        public Character?[] Team { get; private set; } = [null, null, null, null];
 
         public List<Mission> Missions
         {
@@ -77,15 +75,15 @@ namespace Dungeon_Master_Manager
             SelectedMission = mission_index;
             return Missions[(int)SelectedMission];
         }
-        
-        
+
+
         /// <summary>
         /// Simulates the selected mission
         /// </summary>
         public void StartMission(Mission mission)
         {
             // Implement the logic to start the mission
-            foreach (var member in team)
+            foreach (var member in Team)
             {
                 foreach (var monster in mission.Monsters)
                 {
@@ -104,15 +102,21 @@ namespace Dungeon_Master_Manager
         /// </summary>
         public void AddTeamMember(Character member)
         {
-            team = team.Append(member).ToArray();
+            for (var i = 0; i < Team.Length; i++)
+            {
+                if (Team[i] != null) continue;
+                Team[i] = member;
+                return;
+            }
         }
 
         /// <summary>
         /// Removes a character from the team
         /// </summary>
-        public void RemoveTeamMember(Character member)
+        public void RemoveTeamMember(uint slot)
         {
-            team = team.Where(c => c != member).ToArray();
+            Team[slot] = null;
+            Trace.WriteLine(Team);
         }
 
         /// <summary>
@@ -135,9 +139,14 @@ namespace Dungeon_Master_Manager
         {
             base.OnStartup(e);
 
-            MainWindow w = new MainWindow();
+            // Load missions
+            var jsonString = File.ReadAllText("../../../assets/missions.json");
+            Missions = JsonSerializer.Deserialize<List<model.Mission>>(jsonString) ?? [];
 
-            Character defaultCharacter = new Character("Daniel", Element.Electrik, WeaponClass.Range);
+            var w = new MainWindow();
+
+            // Add a default character
+            var defaultCharacter = new Character("Daniel", Element.Electrik, WeaponClass.Range);
             AddCharacter(defaultCharacter);
             AddTeamMember(Characters[0]);
 

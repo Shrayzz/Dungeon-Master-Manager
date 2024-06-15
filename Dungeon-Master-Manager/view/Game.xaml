@@ -14,13 +14,13 @@
             <RowDefinition Height="95*"/>
         </Grid.RowDefinitions>
 
-        <TabControl x:Name="MainTabControl" Grid.Row="0" Height="50">
+        <TabControl x:FieldModifier="public" x:Name="MainTabControl" Grid.Row="0" Height="50">
             <TabItem Header="Missions" Width="100" HorizontalAlignment="Left"/>
             <TabItem Header="Characters" Width="100" HorizontalAlignment="Left"/>
             <TabItem Header="Items" Width="100" HorizontalAlignment="Left"/>
             <TabItem Header="Credits" Width="50" HorizontalAlignment="Left"/>
         </TabControl>
 
-        <Frame x:Name="ContentFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="ContentFrame" x:FieldModifier="public" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -1,61 +1,46 @@
-﻿using Dungeon_Master_Manager.model;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.IO;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Dungeon_Master_Manager.view
 {
     /// <summary>
     /// Logique d'interaction pour Map.xaml
     /// </summary>
-    public partial class Map : Window
+    public partial class Map
     {
         public Map()
         {
             InitializeComponent();
             LoadMissions();
+            RenderMission(((App)Application.Current).SelectedMission);
         }
 
         private void LoadMissions()
         {
-            string jsonString = File.ReadAllText("../../../assets/missions.json");
-            ((App)Application.Current).Missions = JsonSerializer.Deserialize<List<model.Mission>>(jsonString);
-
+            
             if (((App)Application.Current).Missions.Count == 0) return;
 
             for (int i = 0; i < ((App)Application.Current).Missions.Count; i++)
             {
-                model.Mission m = ((App)Application.Current).Missions[i];
-                Button b = new Button();
-                b.Style = (Style)this.Resources["MissionDot"];
-                b.Width = 7;
-                b.Height = 7;
-                b.Tag = i.ToString();
+                var m = ((App)Application.Current).Missions[i];
+                var b = new Button
+                {
+                    Style = ((Style)this.Resources["MissionDot"]),
+                    Width = 7,
+                    Height = 7,
+                    Tag = i.ToString(),
+                    Margin = new Thickness(m.MarginLeft, m.MarginTop, m.MarginRight, m.MarginBottom)
+                };
 
-                b.Margin = new Thickness(m.MarginLeft, m.MarginTop, m.MarginRight, m.MarginBottom);
                 b.Click += SelectMissionEvent;
                 MapDots.Children.Add(b);
             }
         }
 
-        public void SelectMissionEvent(Object? caller, EventArgs e)
+        private void RenderMission(uint missionId)
         {
-            uint mission_id = Convert.ToUInt32(((Button)caller).Tag);
-            model.Mission m = ((App)Application.Current).SelectMission(mission_id);
+            var m = ((App)Application.Current).SelectMission(missionId);
             UIMissionName.Text = "Nom de la mission :" + m.Name;
             DescriptionTextBlock.Text = m.Description;
 
@@ -72,12 +57,11 @@ namespace Dungeon_Master_Manager.view
             }
         }
 
-
-        public class Mission
+        private void SelectMissionEvent(object? caller, EventArgs e)
         {
-            public string? Name { get; set; }
-            public string? Description { get; set; }
-            public string? Rewards { get; set; }
+            var missionId = Convert.ToUInt32(((Button)caller).Tag);
+            RenderMission(missionId);
+            
         }
 
         private void MissionViewBackButtonClick(object sender, RoutedEventArgs e)
