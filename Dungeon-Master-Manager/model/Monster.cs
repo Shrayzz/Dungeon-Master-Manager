@@ -1,18 +1,17 @@
-using System;
 using System.Text.Json.Serialization;
 
-/// <summary>
-/// An entity that can live, die, attack, and is strong against some Elements
-/// </summary>
 namespace Dungeon_Master_Manager.model
 {
+    /// <summary>
+    /// An entity that can live, die, attack, and is strong against some Elements
+    /// </summary>
     public class Monster
     {
         /// <summary>
         /// A monster's health
         /// </summary>
         [JsonPropertyName("health")]
-        public uint Health { get; set; }
+        public int Health { get; set; }
 
 
         /// <summary>
@@ -52,13 +51,13 @@ namespace Dungeon_Master_Manager.model
         /// <summary>
         /// Constructor for Monster
         /// </summary>
-        public Monster(uint health, Element weakness, double weaknessPercent, Element resistance, double resistancePercent)
+        public Monster(int health, Element weakness, double weaknessPercent, Element resistance, double resistancePercent)
         {
-            this.Health = health;
-            this.Weakness = weakness;
-            this.WeaknessPercent = weaknessPercent;
-            this.Resistance = resistance;
-            this.ResistancePercent = resistancePercent;
+            Health = health;
+            Weakness = weakness;
+            WeaknessPercent = weaknessPercent;
+            Resistance = resistance;
+            ResistancePercent = resistancePercent;
         }
         public Monster() { }
     }

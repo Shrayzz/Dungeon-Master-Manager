@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace Dungeon_Master_Manager.model
@@ -50,20 +48,22 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public Character(string name, Element element, WeaponClass class_)
         {
-            this.Name = name;
-            this.Element = element;
-            this.AcceptedWeapons = class_;
-            this.Health = 20;
-            this.Inventory = new List<Item>();
+            Name = name;
+            Element = element;
+            AcceptedWeapons = class_;
+            Health = 20;
+            Inventory = new List<Item>();
         }
 
-        public Character() { }
+        public Character()
+        {
+        }
+
         /// <summary>
         /// Damages the character by a given amount
         /// </summary>
         public void Damage(uint amount)
         {
-
             if (amount >= Health)
             {
                 Health = 0;
@@ -132,43 +132,41 @@ namespace Dungeon_Master_Manager.model
         /// </summary>
         public void Attack(Monster monster)
         {
-            if (this.Weapon == null) return;
-
-            double multiplier = 1.0;
-
-            if (monster.Weakness == this.Element)
+            if (Weapon == null)
             {
-                multiplier += monster.WeaknessPercent;
+                return;
             }
 
-            if (monster.Resistance == this.Element)
+            double damage = Weapon.Value;
+
+            if (monster.Weakness == Element)
             {
-                multiplier -= monster.ResistancePercent;
+                damage *= (1 + monster.WeaknessPercent);
+            }
+            else if (monster.Resistance == Element)
+            {
+                damage *= (1 - monster.ResistancePercent);
             }
 
-            // Apply weapon value to the multiplier
-            multiplier *= this.Weapon.Value;
 
-            // Reduce monster's health
-            monster.Health = (uint)(monster.Health * multiplier);
+            monster.Health = (int)(monster.Health - damage);
         }
-        
+
+
         public override string ToString()
         {
+            var str = $"👤 Prénom: {Name}\n" +
+                      $"🌟 Element: {Element}\n" +
+                      $"⚔️ Type d'arme acceptée: {AcceptedWeapons}\n" +
+                      $"❤️ Santée: {Health}\n";
 
-            var str =  $"👤 Prénom: {Name}\n" +
-                   $"🌟 Element: {Element}\n" +
-                   $"⚔️ Type d'arme acceptée: {AcceptedWeapons}\n" +
-                   $"❤️ Santée: {Health}\n";
-
-            if (this.Weapon != null)
+            if (Weapon != null)
             {
                 str += $"---- Inventaire de {Name} ----\n";
                 str = Inventory.Aggregate(str, (current, it) => current + (it + "\n"));
             }
-            
+
             return str;
         }
-
     }
 }

@@ -29,7 +29,7 @@ public partial class Missions
                     Source = new BitmapImage(new Uri("../assets/man.png", UriKind.Relative)),
                     Height = 140,
                     Cursor = Cursors.Hand,
-                    ToolTip = currentPlayer.ToString() + $"\nClic gauche pour modifier {currentPlayer.Name}\nClic droit pour enlever {currentPlayer.Name} de l'équipe"
+                    ToolTip = currentPlayer + $"\nClic gauche pour modifier {currentPlayer.Name}\nClic droit pour enlever {currentPlayer.Name} de l'équipe"
                 };
                 slot.MouseDown += PlayerSlot_OnMouseDown;
                 Grid.SetColumn(slot, (int)i);
@@ -119,5 +119,10 @@ public partial class Missions
                 characterEditorWindow.ShowDialog();
             }
         }
+    }
+
+    private void SimulateButtonClicked(object sender, RoutedEventArgs e)
+    {
+        ((App)Application.Current).StartMission();
     }
 }

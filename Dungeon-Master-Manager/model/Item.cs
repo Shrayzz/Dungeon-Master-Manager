@@ -1,4 +1,3 @@
-using System;
 using System.Text.Json.Serialization;
 
 namespace Dungeon_Master_Manager.model {
@@ -43,11 +42,11 @@ namespace Dungeon_Master_Manager.model {
 		public Item() { }
 		public Item(string name, string description, ItemType type, WeaponClass? range, int value)
 		{
-			this.Name = name;
-			this.Description = description;
-			this.Type = type;
-			this.Range = range;
-			this.Value = value;
+			Name = name;
+			Description = description;
+			Type = type;
+			Range = range;
+			Value = value;
 		}
 		
 		public override string ToString()

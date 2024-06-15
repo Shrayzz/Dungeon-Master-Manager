@@ -59,7 +59,7 @@
                     </TextBlock>
                 </Viewbox>
                 <Grid Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Height="50" Width="200" FontSize="15" Padding="10">Partir à l'aventure (simuler)</Button>
+                    <Button Height="50" Width="200" FontSize="15" Padding="10" Click="SimulateButtonClicked">Partir à l'aventure (simuler)</Button>
                 </Grid>
 
             </Grid>
