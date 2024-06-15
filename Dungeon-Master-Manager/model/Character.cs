@@ -96,7 +96,7 @@ namespace Dungeon_Master_Manager.model
                 throw new InvalidOperationException("Item is already equipped.");
             }
 
-            if (item.Type == ItemType.Weapon && AcceptedWeapons == item.Range)
+            if (!(item.Type == ItemType.Weapon && AcceptedWeapons == item.Range))
             {
                 throw new InvalidOperationException("This character cannot wield this weapon.");
             }
@@ -156,10 +156,18 @@ namespace Dungeon_Master_Manager.model
         public override string ToString()
         {
 
-            return $"👤 Character: {Name}\n" +
+            var str =  $"👤 Prénom: {Name}\n" +
                    $"🌟 Element: {Element}\n" +
-                   $"⚔️ Accepted Weapons: {AcceptedWeapons}\n" +
-                   $"❤️ Health: {Health}\n";
+                   $"⚔️ Type d'arme acceptée: {AcceptedWeapons}\n" +
+                   $"❤️ Santée: {Health}\n";
+
+            if (this.Weapon != null)
+            {
+                str += $"---- Inventaire de {Name} ----\n";
+                str = Inventory.Aggregate(str, (current, it) => current + (it + "\n"));
+            }
+            
+            return str;
         }
 
     }

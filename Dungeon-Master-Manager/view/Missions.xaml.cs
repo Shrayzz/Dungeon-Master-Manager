@@ -12,25 +12,24 @@ namespace Dungeon_Master_Manager.view;
 /// </summary>
 public partial class Missions
 {
-    public Missions()
+    private void RenderTeam()
     {
-        InitializeComponent();
-        var missionIndex = ((App)Application.Current).SelectedMission;
-        MissionsMissionDetailTextBlock.Text = ((App)Application.Current).Missions[(int)missionIndex].Description;
-
+        CGrid.Children.Clear();
         var playerTeam = ((App)Application.Current).Team;
 
         for (uint i = 0; i < playerTeam.Length; i++)
         {
             if (playerTeam[i] != null)
             {
+                var currentPlayer = playerTeam[i]!;
                 var slot = new Image
                 {
                     Tag = "character",
                     Uid = i.ToString(),
                     Source = new BitmapImage(new Uri("../assets/man.png", UriKind.Relative)),
                     Height = 140,
-                    Cursor = Cursors.Hand
+                    Cursor = Cursors.Hand,
+                    ToolTip = currentPlayer.ToString() + $"\nClic gauche pour modifier {currentPlayer.Name}\nClic droit pour enlever {currentPlayer.Name} de l'équipe"
                 };
                 slot.MouseDown += PlayerSlot_OnMouseDown;
                 Grid.SetColumn(slot, (int)i);
@@ -53,6 +52,14 @@ public partial class Missions
         }
     }
 
+    public Missions()
+    {
+        InitializeComponent();
+        var missionIndex = ((App)Application.Current).SelectedMission;
+        MissionsMissionDetailTextBlock.Text = ((App)Application.Current).Missions[(int)missionIndex].Description;
+        RenderTeam();
+    }
+
     private void Image_OpenMissionsDetails(object sender, MouseButtonEventArgs e)
     {
         var map = new view.Map();
@@ -61,7 +68,7 @@ public partial class Missions
         MissionsMissionDetailTextBlock.Text = ((App)Application.Current).Missions[(int)missionIndex].Description;
     }
 
-    private static void PlayerSlot_OnMouseDown(object sender, MouseButtonEventArgs e)
+    private void PlayerSlot_OnMouseDown(object sender, MouseButtonEventArgs e)
     {
         var pslot = Convert.ToUInt32(((Image)sender).Uid);
         var slotEmpty = (string)((Image)sender).Tag == "plus";
@@ -76,8 +83,16 @@ public partial class Missions
             for (var i = 0; i < Application.Current.Windows.Count; i++)
             {
                 if (Application.Current.Windows[i]!.GetType() != typeof(Game)) continue;
-                ((Game)(Application.Current.Windows[i])).MainTabControl.SelectedIndex = 1;
-                ((Game)(Application.Current.Windows[i])).ContentFrame.Content = new Characters();
+                var gameWindow = (Game)(Application.Current.Windows[i])!;
+                
+                // Hack to not trigger the event, so it does not reset out intent
+                gameWindow.MainTabControl.SelectionChanged -= gameWindow.TabControl_SelectionChanged;
+
+                gameWindow.MainTabControl.SelectedIndex = 1;
+
+                gameWindow.MainTabControl.SelectionChanged += gameWindow.TabControl_SelectionChanged;
+
+                gameWindow.ContentFrame.Content = new Characters();
                 break;
             }
         }
@@ -85,19 +100,23 @@ public partial class Missions
         {
             if (e.RightButton == MouseButtonState.Pressed)
             {
+                var userIntention = MessageBox.Show("Voulez-vous vraiment supprimer ce personnage de votre équipe ?", "Enlever le joueur de l'équipe ?", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (userIntention != MessageBoxResult.Yes) return;
+                
                 ((App)Application.Current).RemoveTeamMember(pslot);
 
                 // Reset intent just in case
                 ((App)Application.Current).Intent = Intent.View;
+                // ReRender the team viewer
+                RenderTeam();
+                return;
+            }
 
-                // Reload the view
-                for (var i = 0; i < Application.Current.Windows.Count; i++)
-                {
-                    if (Application.Current.Windows[i]!.GetType() != typeof(Game)) continue;
-                    ((Game)(Application.Current.Windows[i])).MainTabControl.SelectedIndex = 0;
-                    ((Game)(Application.Current.Windows[i])).ContentFrame.Content = new Missions();
-                    break;
-                }
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                ((App)Application.Current).Intent = Intent.View;
+                var characterEditorWindow = new CharacterWindow();
+                characterEditorWindow.ShowDialog();
             }
         }
     }

@@ -100,8 +100,16 @@ namespace Dungeon_Master_Manager
         /// <summary>
         /// Add a character to the player's team
         /// </summary>
-        public void AddTeamMember(Character member)
+        public void AddTeamMember(uint characterIndex)
         {
+            var member = Characters[characterIndex];
+
+            if (Team.Contains(member))
+            {
+                MessageBox.Show("Le personnage est déjà dans l'équipe", "Information sur l'équipe", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            } 
+            
             for (var i = 0; i < Team.Length; i++)
             {
                 if (Team[i] != null) continue;
@@ -146,9 +154,18 @@ namespace Dungeon_Master_Manager
             var w = new MainWindow();
 
             // Add a default character
-            var defaultCharacter = new Character("Daniel", Element.Electrik, WeaponClass.Range);
+            var defaultCharacter = new Character("Daniel", Element.Electrik, WeaponClass.Melee);
+            defaultCharacter.Equip(new Item()
+            {
+                Name = "Le bâton de Daniel",
+                Description = "Une simple branch d'arbre que Daniel à trouvé au sol en forêt",
+                Type = ItemType.Weapon,
+                Range = WeaponClass.Melee,
+                Value = 3
+            });
             AddCharacter(defaultCharacter);
-            AddTeamMember(Characters[0]);
+            
+            AddTeamMember(0);
 
             w.Show();
         }

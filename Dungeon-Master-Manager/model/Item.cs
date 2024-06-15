@@ -52,11 +52,11 @@ namespace Dungeon_Master_Manager.model {
 		
 		public override string ToString()
 		{
-			string valueTypeDescription = Type == ItemType.Weapon ? "Damage" : "Health";
+			string valueTypeDescription = Type == ItemType.Weapon ? "Dégâts" : "Valeure";
 			string valueEmoji = Type == ItemType.Weapon ? "⚔️" : "❤️";
-			string rangeText = Range.HasValue ?  $"🏹 Range: {Range.ToString()}\n" : "";
+			string rangeText = Range.HasValue ?  $"🏹 Portée: {Range.ToString()}\n" : "";
             
-			return $"🛠️ Item: {Name}\n" +
+			return $"🛠️ Objet: {Name}\n" +
 			       $"📜 Description: {Description}\n" +
 			       $"🔖 Type: {Type}\n" +
 			       rangeText +

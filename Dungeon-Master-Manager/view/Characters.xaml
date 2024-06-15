@@ -6,77 +6,25 @@
       xmlns:local="clr-namespace:Dungeon_Master_Manager.view"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
+      
       Title="Characters">
 
-    <Grid>
+    <Grid x:Name="CharacterGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
        
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="0">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/> 
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="1">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="2">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="3">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="4">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="5">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="0">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="5">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="0">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="2">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="3">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="4">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="5">
-            <Image Source="../assets/man.png" MouseDown="OpenCharacter" Margin="15"/>
-        </Viewbox>
+
     </Grid>
 </Page>

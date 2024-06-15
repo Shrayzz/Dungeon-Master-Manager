@@ -30,7 +30,7 @@ namespace Dungeon_Master_Manager.view
             MainTabControl.SelectionChanged += TabControl_SelectionChanged;
         }
 
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.Source is TabControl tabControl)
             {
