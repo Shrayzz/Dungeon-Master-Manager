@@ -158,7 +158,7 @@ namespace Dungeon_Master_Manager.model
             var str = $"👤 Prénom: {Name}\n" +
                       $"🌟 Element: {Element}\n" +
                       $"⚔️ Type d'arme acceptée: {AcceptedWeapons}\n" +
-                      $"❤️ Santée: {Health}\n";
+                      $"❤️ Santé: {Health}\n";
 
             if (Weapon != null)
             {
