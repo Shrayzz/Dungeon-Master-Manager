@@ -1,12 +1,12 @@
 ﻿[
   {
-    "name": "Mission One",
-    "description": "This is the first mission.",
+    "name": "Protection du Marché",
+    "description": "Les marchands de la ville sont attaqués par des voleurs. Vous devez les protéger et attraper les coupables.",
     "marginTop": 0,
     "marginBottom": 0,
     "marginRight": 0,
     "marginLeft": 0,
-    "reward_gold": 500,
+    "reward_gold": 2500,
     "monsters": [
       {
         "health": 20,
@@ -37,13 +37,13 @@
     ]
   },
   {
-    "name": "Mission Two",
-    "description": "Description for Mission Two.",
+    "name": "Espionnage Commercial",
+    "description": "Un rival commercial espionne les plans de votre maître. Débusquez l'espion et récupérez les documents volés.",
     "marginTop": 26,
     "marginBottom": 260,
     "marginRight": 247,
     "marginLeft": 39,
-    "reward_gold": 500,
+    "reward_gold": 5000,
     "monsters": [
       {
         "health": 20,
@@ -74,13 +74,13 @@
     ]
   },
   {
-    "name": "Mission Three",
-    "description": "Description for Mission Three.",
+    "name": "Point d'eau",
+    "description": " Les frontières du royaume sont menacées par des gobelins et des bandits. Patrouillez et repoussez les envahisseurs.",
     "marginTop": 10,
     "marginBottom": 279,
     "marginRight": 21,
     "marginLeft": 268,
-    "reward_gold": 500,
+    "reward_gold": 2000,
     "monsters": [
       {
         "health": 20,
@@ -111,13 +111,13 @@
     ]
   },
   {
-    "name": "Mission Four",
-    "description": "Description for Mission Four.",
+    "name": "Épidémie Mystérieuse",
+    "description": "Une étrange maladie se propage dans le domaine de Monsieur Aubrin. Trouvez l'origine du problème",
     "marginTop": 57,
     "marginBottom": 232,
     "marginRight": 126,
     "marginLeft": 163,
-    "reward_gold": 500,
+    "reward_gold": 1500,
     "monsters": [
       {
         "health": 20,
@@ -148,13 +148,13 @@
     ]
   },
   {
-    "name": "Mission Five",
-    "description": "Description for Mission Five.",
+    "name": "Révolte des Ouvriers",
+    "description": "Les travailleurs des forges se révoltent contre des conditions de travail et car la plupart du matériel est vendalisé. Négociez une trêve et éliminez les monstres.",
     "marginTop": 88,
     "marginBottom": 201,
     "marginRight": 78,
     "marginLeft": 211,
-    "reward_gold": 500,
+    "reward_gold": 2000,
     "monsters": [
       {
         "health": 20,
@@ -185,13 +185,13 @@
     ]
   },
   {
-    "name": "Mission Six",
-    "description": "Description for Mission Six.",
+    "name": "Quête du Dragon",
+    "description": "Un dragon menace les terres voisines. Parcourez son repaire et éliminez la menace.",
     "marginTop": 88,
     "marginBottom": 201,
     "marginRight": 37,
     "marginLeft": 252,
-    "reward_gold": 500,
+    "reward_gold": 20000,
     "monsters": [
       {
         "health": 20,
@@ -222,13 +222,13 @@
     ]
   },
   {
-    "name": "Mission Seven",
-    "description": "Description for Mission Seven.",
+    "name": "Recrutement d'Aventuriers",
+    "description": "La guilde des aventuriers cherche de nouveaux membres. Participez à une série de défis pour prouver votre valeur.",
     "marginTop": 126,
     "marginBottom": 163,
     "marginRight": 58,
     "marginLeft": 231,
-    "reward_gold": 500,
+    "reward_gold": 1000,
     "monsters": [
       {
         "health": 20,
@@ -259,13 +259,13 @@
     ]
   },
   {
-    "name": "Mission Eight",
-    "description": "Description for Mission Eight.",
+    "name": "Secours en Montagne",
+    "description": "Un groupe de pèlerins est coincé dans une tempête en montagne, des monstres grouillent de partout. Partez à leur secours.",
     "marginTop": 26,
     "marginBottom": 260,
     "marginRight": 247,
     "marginLeft": 39,
-    "reward_gold": 500,
+    "reward_gold": 5000,
     "monsters": [
       {
         "health": 20,
@@ -296,13 +296,13 @@
     ]
   },
   {
-    "name": "Mission Nine",
-    "description": "Description for Mission Nine.",
+    "name": "Artefact Volé",
+    "description": "Un artefact sacré a été volé du temple. Retrouvez-le avant que son absence ne cause des troubles religieux.",
     "marginTop": 147,
     "marginBottom": 142,
     "marginRight": 103,
     "marginLeft": 186,
-    "reward_gold": 500,
+    "reward_gold": 3000,
     "monsters": [
       {
         "health": 20,
@@ -333,13 +333,13 @@
     ]
   },
   {
-    "name": "Mission Ten",
-    "description": "Description for Mission Ten.",
+    "name": "Enquête sur un Meurtre",
+    "description": "Un noble a été assassiné dans son manoir. Menez l'enquête pour découvrir le meurtrier.",
     "marginTop": 108,
     "marginBottom": 181,
     "marginRight": 156,
     "marginLeft": 133,
-    "reward_gold": 500,
+    "reward_gold": 3000,
     "monsters": [
       {
         "health": 20,
@@ -370,13 +370,13 @@
     ]
   },
   {
-    "name": "Mission Eleven",
-    "description": "Description for Mission Eleven.",
+    "name": "Duel de Champions",
+    "description": "Représentez votre seigneur dans un duel contre le plus fort des ogres.",
     "marginTop": 88,
     "marginBottom": 201,
     "marginRight": 205,
     "marginLeft": 84,
-    "reward_gold": 500,
+    "reward_gold": 7500,
     "monsters": [
       {
         "health": 20,
@@ -407,13 +407,13 @@
     ]
   },
   {
-    "name": "Mission Twelve",
-    "description": "Description for Mission Twelve.",
+    "name": "Sauvetage en Souterrain",
+    "description": "Des enfants sont tombés dans les égouts. Explorez les tunnels pour les retrouver et les ramener en sécurité.",
     "marginTop": 137,
     "marginBottom": 152,
     "marginRight": 195,
     "marginLeft": 94,
-    "reward_gold": 500,
+    "reward_gold": 2000,
     "monsters": [
       {
         "health": 20,
@@ -444,13 +444,13 @@
     ]
   },
   {
-    "name": "Mission Thirteen",
-    "description": "Description for Mission Thirteen.",
+    "name": "Festival du Printemps",
+    "description": "Aidez à organiser et protéger le festival annuel de la ville contre des saboteurs.",
     "marginTop": 150,
     "marginBottom": 138,
     "marginRight": 160,
     "marginLeft": 129,
-    "reward_gold": 500,
+    "reward_gold": 5000,
     "monsters": [
       {
         "health": 20,
@@ -481,13 +481,13 @@
     ]
   },
   {
-    "name": "Mission Fourteen",
-    "description": "Description for Mission Fourteen.",
+    "name": "Récupération de Ressources",
+    "description": "La ville manque de ressources essentielles. Voyagez jusqu'à une mine abandonnée et récupérez des matériaux précieux.",
     "marginTop": 191,
     "marginBottom": 98,
     "marginRight": 55,
     "marginLeft": 234,
-    "reward_gold": 500,
+    "reward_gold": 1500,
     "monsters": [
       {
         "health": 20,
@@ -518,13 +518,13 @@
     ]
   },
   {
-    "name": "Mission Fifteen",
-    "description": "Description for Mission Fifteen.",
+    "name": "Espionnage Ennemi",
+    "description": "Infiltrez un camp ennemi et rapportez des informations cruciales pour la défense du royaume.",
     "marginTop": 194,
     "marginBottom": 94,
     "marginRight": 107,
     "marginLeft": 182,
-    "reward_gold": 500,
+    "reward_gold": 3000,
     "monsters": [
       {
         "health": 20,
@@ -555,13 +555,13 @@
     ]
   },
   {
-    "name": "Mission Sixteen",
-    "description": "Description for Mission Sixteen.",
+    "name": "Recherche d'Herbes Médicinales",
+    "description": "Un guérisseur a besoin d'herbes rares pour soigner une épidémie. Explorez la forêt et les marais pour les trouver.",
     "marginTop": 180,
     "marginBottom": 109,
     "marginRight": 268,
     "marginLeft": 21,
-    "reward_gold": 500,
+    "reward_gold": 1500,
     "monsters": [
       {
         "health": 20,
@@ -592,13 +592,13 @@
     ]
   },
   {
-    "name": "Mission Seventeen",
-    "description": "Description for Mission Seventeen.",
+    "name": "Course Contre la Montre",
+    "description": "Transportez un message urgent du roi au capitaine de la garde avant le coucher du soleil.",
     "marginTop": 191,
     "marginBottom": 98,
     "marginRight": 195,
     "marginLeft": 94,
-    "reward_gold": 500,
+    "reward_gold": 3000,
     "monsters": [
       {
         "health": 20,
@@ -629,13 +629,13 @@
     ]
   },
   {
-    "name": "Mission Eighteen",
-    "description": "Description for Mission Eighteen.",
+    "name": "Chasse au Trésor",
+    "description": "Une vieille carte mène à un trésor caché dans les bois. Suivez les indices et trouvez le butin.",
     "marginTop": 240,
     "marginBottom": 49,
     "marginRight": 148,
     "marginLeft": 141,
-    "reward_gold": 500,
+    "reward_gold": 1000,
     "monsters": [
       {
         "health": 20,
@@ -666,9 +666,9 @@
     ]
   },
   {
-    "name": "Mission Nineteen",
-    "description": "Description for Mission Nineteen.",
-    "marginTop": 250,
+    "name": "Détournement de Convoi",
+    "description": "Interceptez un convoi de ravitaillement ennemi et ramenez les provisions à votre camp.",
+    "marginTop": 3000,
     "marginBottom": 39,
     "marginRight": 223,
     "marginLeft": 66,
@@ -703,13 +703,13 @@
     ]
   },
   {
-    "name": "Mission Twenty",
-    "description": "Description for Mission Twenty.",
+    "name": "Patrouille Frontalière",
+    "description": "Les frontières du royaume sont menacées par des bandits. Patrouillez et repoussez les envahisseurs.",
     "marginTop": 279,
     "marginBottom": 10,
     "marginRight": 279,
     "marginLeft": 10,
-    "reward_gold": 500,
+    "reward_gold": 2000,
     "monsters": [
       {
         "health": 20,
@@ -740,13 +740,13 @@
     ]
   },
   {
-    "name": "Mission Twenty-One",
-    "description": "Description for Mission Twenty-One.",
+    "name": "Port de pêche",
+    "description": "Des rumeurs semblent faire croire qu'un monstre puissant et ses acolytes habitent en ces eaux.",
     "marginTop": 246,
     "marginBottom": 42,
     "marginRight": 41,
     "marginLeft": 248,
-    "reward_gold": 500,
+    "reward_gold": 10000,
     "monsters": [
       {
         "health": 20,
