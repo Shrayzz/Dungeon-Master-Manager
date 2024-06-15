@@ -1,0 +1,56 @@
+﻿<Window x:Class="Dungeon_Master_Manager.view.Shop"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Dungeon_Master_Manager.view"
+      mc:Ignorable="d" 
+      Height="450" Width="800"
+        ResizeMode="NoResize"
+      Title="Shop">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" Grid.Column="0" Margin="10">
+            <Border BorderBrush="Gray" BorderThickness="1">
+                <Viewbox Height="200" VerticalAlignment="Top">
+                    <Image Source="../assets/man.png" Margin="20"/>
+                </Viewbox>
+            </Border>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="200*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Margin="2" Source="../assets/man.png" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Placeholder" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Image Grid.Row="1" Grid.Column="0" Margin="2" Source="../assets/plus.png" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="Placeholder" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="20">
+                <Border BorderBrush="Gray" BorderThickness="1">
+                    <Viewbox VerticalAlignment="Top">
+                        <TextBlock Text="Weapon Desc Placeholder" Height="80" Width="200" FontSize="15"/>
+                    </Viewbox>
+                </Border>
+                <Button Content="Acheter (Gold)" Width="130" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="ExtraBold"/>
+            </StackPanel>
+        </StackPanel>
+        <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="10">
+            <StackPanel>
+                <TextBlock Margin="15" Text="> Placeholder" TextAlignment="Left" FontSize="25" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
