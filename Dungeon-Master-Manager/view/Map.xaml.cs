@@ -26,7 +26,7 @@ namespace Dungeon_Master_Manager.view
                 var m = ((App)Application.Current).Missions[i];
                 var b = new Button
                 {
-                    Style = ((Style)this.Resources["MissionDot"]),
+                    Style = m.MissionDone ? ((Style)this.Resources["MissionDotFinished"]): ((Style)this.Resources["MissionDotUnfinished"]),
                     Width = 7,
                     Height = 7,
                     Tag = i.ToString(),

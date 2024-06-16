@@ -33,7 +33,12 @@ namespace Dungeon_Master_Manager
         /// <summary>
         /// The selected mission
         /// </summary>
-        public uint SelectedMission { get; set; } = 0;
+        public uint SelectedMission { get; private set; } = 0;
+
+        /// <summary>
+        /// The index of something from an inventory like storage that goes with the selection Intent
+        /// </summary>
+        public int SelectedThing { get; set; } = 0;
 
         /// <summary>
         /// The list of all available characters the player recruited
@@ -62,18 +67,14 @@ namespace Dungeon_Master_Manager
 
         public List<Mission> Missions
         {
-            get { return missions; }
-            set { missions = value; }
+            get => missions;
+            private set => missions = value;
         }
 
-        public Monster[] Monsters
-        {
-            get { return monsters; }
-        }
 
-        public Mission SelectMission(uint mission_index)
+        public Mission SelectMission(uint missionIndex)
         {
-            SelectedMission = mission_index;
+            SelectedMission = missionIndex;
             return Missions[(int)SelectedMission];
         }
 
@@ -84,6 +85,15 @@ namespace Dungeon_Master_Manager
         public void StartMission()
         {
             Mission mission = Missions[(int)SelectedMission];
+
+            if (!(mission.Monsters.Any(monster => monster.Health > 0)))
+            {
+                MessageBox.Show("Vous avez déjà fini cette mission !",
+                    "Simulation",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
             Character[] team = Team.Where(member => member != null).ToArray();
             var missionLog = "";
 
@@ -106,12 +116,13 @@ namespace Dungeon_Master_Manager
                     {
                         continue;
                     }
-                    
+
                     missionLog += $"--- Au tour de {character.Name}\n";
                     Item? healingItem = character.Inventory.FirstOrDefault(item => item.Type == ItemType.Consumable);
                     if (character.Health < 10 && healingItem != null)
                     {
-                        missionLog += $"--- {character.Name}' se soigne de {healingItem.Value} HP! Il à maintenant {character.Health} PV !\n";
+                        missionLog +=
+                            $"--- {character.Name}' se soigne de {healingItem.Value} HP! Il à maintenant {character.Health} PV !\n";
                         character.Heal((uint)healingItem.Value);
                         character.Inventory.Remove(healingItem);
                         continue; // Next character
@@ -148,6 +159,7 @@ namespace Dungeon_Master_Manager
             {
                 missionLog += $"---- Tout les monstres sont mort !\n";
                 MessageBox.Show("Tout les monstres sont morts ! Mission réussie !");
+                mission.MissionDone = true;
                 mission.GrantRewards();
             }
             else
@@ -220,14 +232,26 @@ namespace Dungeon_Master_Manager
 
             // Add a default character
             var defaultCharacter = new Character("Daniel", Element.Electrik, WeaponClass.Melee);
-            defaultCharacter.Equip(new Item()
+            var defaultWeapon = new Item()
             {
                 Name = "Le bâton de Daniel",
                 Description = "Une simple branch d'arbre que Daniel à trouvé au sol en forêt",
                 Type = ItemType.Weapon,
                 Range = WeaponClass.Melee,
                 Value = 7
+            };
+            StoreItem(defaultWeapon);
+            StoreItem(new Item()
+            {
+                Name = "Health potion",
+                Description = "A simple health potion",
+                Type = ItemType.Consumable,
+                Value = 20
             });
+
+
+            defaultCharacter.Equip(Inventory[0]);
+
             AddCharacter(defaultCharacter);
 
             AddTeamMember(0);

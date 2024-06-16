@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Items">
-    <Grid>
+    <Grid x:Name="ItemGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
@@ -23,59 +23,6 @@
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
 
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="0">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>  
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="1">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="2">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="3">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="4">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="5">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="0">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="2">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="3">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="4">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="5">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="0">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="2">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="3">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="4">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
-        <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="5">
-            <Image Source="../assets/sword.png" MouseDown="OpenItem" Margin="15"/>
-        </Viewbox>
+       
     </Grid>
 </Page>

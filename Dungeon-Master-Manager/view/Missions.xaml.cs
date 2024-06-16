@@ -91,7 +91,7 @@ public partial class Missions
                 gameWindow.MainTabControl.SelectedIndex = 1;
 
                 gameWindow.MainTabControl.SelectionChanged += gameWindow.TabControl_SelectionChanged;
-
+                
                 gameWindow.ContentFrame.Content = new Characters();
                 break;
             }
@@ -116,6 +116,7 @@ public partial class Missions
             {
                 ((App)Application.Current).Intent = Intent.View;
                 var characterEditorWindow = new CharacterWindow();
+                ((App)Application.Current).SelectedThing = (int)pslot;
                 characterEditorWindow.ShowDialog();
             }
         }

@@ -60,6 +60,11 @@ namespace Dungeon_Master_Manager.model
         [JsonPropertyName("reward_characters")]
         public Character[] RewardCharacters { get; set; }
 
+        /// <summary>
+        /// Wether or not we finished this mission
+        /// </summary>
+        public bool MissionDone { get; set; } = false;
+
 
         /// <summary>
         /// Constructor to initialize the Mission

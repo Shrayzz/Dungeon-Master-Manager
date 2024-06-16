@@ -1,34 +1,62 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>Dungeon_Master_Manager</RootNamespace>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <RootNamespace>Dungeon_Master_Manager</RootNamespace>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="assets\man.png" />
-    <None Remove="assets\missions-map.png" />
-    <None Remove="assets\plus.png" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="assets\man.png"/>
+        <None Remove="assets\missions-map.png"/>
+        <None Remove="assets\plus.png"/>
+        <None Remove="assets\sword.png"/>
+        <None Remove="assets\health-potion.png"/>
+        <None Remove="assets\crystal-ball.png"/>
+        <None Remove="assets\earth.png"/>
+        <None Remove="assets\lightning.png"/>
+        <None Remove="assets\range.png"/>
+        <None Remove="assets\snowflake.png"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="model\" />
-  </ItemGroup>
+    <ItemGroup>
+        <Folder Include="model\"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="assets\man.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="assets\missions-map.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="assets\plus.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
+    <ItemGroup>
+        <Resource Include="assets\man.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\missions-map.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\plus.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\sword.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\health-potion.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\crystal-ball.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\earth.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\lightning.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\range.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\snowflake.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
+    </ItemGroup>
 
 </Project>

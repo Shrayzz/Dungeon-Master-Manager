@@ -62,12 +62,13 @@ namespace Dungeon_Master_Manager.view
                 case Intent.Select:
                 {
                     ((App)Application.Current).AddTeamMember(clickedCharacter);
+                    ((App)Application.Current).SelectedThing = (int)clickedCharacter;
                     for (var i = 0; i < Application.Current.Windows.Count; i++)
                     {
                         if (Application.Current.Windows[i]!.GetType() != typeof(Game)) continue;
                         var gameWindow = (Game)(Application.Current.Windows[i])!;
-                        gameWindow.MainTabControl.SelectedIndex =
-                            0; // Here we want to trigger the change event to reset out intent
+                        // Here we want to trigger the change event to reset out intent
+                        gameWindow.MainTabControl.SelectedIndex = 0;
                         break;
                     }
 
@@ -78,6 +79,7 @@ namespace Dungeon_Master_Manager.view
                     if (e.LeftButton == MouseButtonState.Pressed)
                     {
                         ((App)Application.Current).Intent = Intent.View;
+                        ((App)Application.Current).SelectedThing = (int)clickedCharacter;
                         var characterEditorWindow = new CharacterWindow();
                         characterEditorWindow.ShowDialog();
                     }

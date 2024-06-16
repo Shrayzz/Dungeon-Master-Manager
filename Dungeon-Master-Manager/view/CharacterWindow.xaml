@@ -23,9 +23,9 @@
         </Border>
 
         <StackPanel Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBox Text="Nom du personnage" Margin="20" VerticalAlignment="Top" Height="40" FontSize="23" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="CNameBox" Margin="20" VerticalAlignment="Top" Height="40" FontSize="23" TextAlignment="Center" FontWeight="Bold" TextChanged="CNameBox_OnTextChanged"/>
 
-            <Grid Margin="30" VerticalAlignment="Top">
+            <Grid x:Name="CInfoGrid" Margin="30" VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150" />
                     <RowDefinition Height="150" />
@@ -35,16 +35,16 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <!-- Ajoutez vos éléments de tableau ici -->
-                <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/>
+               
+                <!-- <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/> -->
             </Grid>
 
-            <Grid Margin="50" VerticalAlignment="Top" Height="150">
+            <Grid x:Name="CInvGrid" Margin="50" VerticalAlignment="Top" Height="150">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
@@ -55,10 +55,10 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 
-                <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/>
-                <Border Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="1"/>
+                <!-- <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1"/> -->
+                <!-- <Border Grid.Row="0" Grid.Column="3" BorderBrush="Black" BorderThickness="1"/> -->
             </Grid>
         </StackPanel>
     </Grid>
