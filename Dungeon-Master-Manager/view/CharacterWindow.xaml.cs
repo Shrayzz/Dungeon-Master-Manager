@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Dungeon_Master_Manager.model;
 
 namespace Dungeon_Master_Manager.view
@@ -83,10 +73,27 @@ namespace Dungeon_Master_Manager.view
                 CInfoGrid.Children.Add(image);
             }
 
-            for (var i=0;i<selectedCharacter.Inventory.Count;i++)
+            for (var i = 0; i < selectedCharacter.Inventory.Count; i++)
             {
                 var item = selectedCharacter.Inventory[i];
-               
+
+                if (item == null)
+                {
+                    var plusImage = new Image()
+                    {
+                        Source = new BitmapImage(new Uri("../assets/plus.png", UriKind.Relative)),
+                        ToolTip = "Click gauche pour ajouter un object",
+                        Tag = "plus",
+                        Cursor = Cursors.Hand,
+                        Uid = i.ToString(),
+                        Height = 50,
+                    };
+                    plusImage.MouseDown += OnCharacterInvSlotClicked;
+                    Grid.SetColumn(plusImage, i);
+                    CInvGrid.Children.Add(plusImage);
+                    continue;
+                }
+
                 var imageSource = item.Type switch
                 {
                     ItemType.Consumable => potionImage,
@@ -97,15 +104,19 @@ namespace Dungeon_Master_Manager.view
                         WeaponClass.Range => rangeImage
                     }
                 };
-                
+
                 var image = new Image()
                 {
-                    ToolTip = item.ToString(),
+                    ToolTip =
+                        item + $"\n Click gauche pour enlever l'objet de l'inventaire de {selectedCharacter.Name}",
                     Source = imageSource,
-                    Height = 50
+                    Cursor = Cursors.Hand,
+                    Tag = "item",
+                    Uid = i.ToString(),
+                    Height = 50,
                 };
-                
-                
+
+                image.MouseDown += OnCharacterInvSlotClicked;
                 Grid.SetColumn(image, i);
                 CInvGrid.Children.Add(image);
             }
@@ -116,6 +127,30 @@ namespace Dungeon_Master_Manager.view
             var app = ((App)Application.Current);
             var selectedCharacter = app.Characters[app.SelectedThing];
             selectedCharacter.Name = CNameBox.Text;
+        }
+
+        private void OnCharacterInvSlotClicked(object sender, MouseEventArgs e)
+        {
+            var isSlotEmpty = (string)((Image)sender).Tag == "plus";
+            var islot = Convert.ToInt32(((Image)sender).Uid);
+
+            ((App)Application.Current).Intent = Intent.Select;
+            for (var i = 0; i < Application.Current.Windows.Count; i++)
+            {
+                if (Application.Current.Windows[i]!.GetType() != typeof(Game)) continue;
+                var gameWindow = (Game)(Application.Current.Windows[i])!;
+
+                // Hack to not trigger the event, so it does not reset out intent
+                gameWindow.MainTabControl.SelectionChanged -= gameWindow.TabControl_SelectionChanged;
+
+                gameWindow.MainTabControl.SelectedIndex = 2;
+
+                gameWindow.MainTabControl.SelectionChanged += gameWindow.TabControl_SelectionChanged;
+
+                gameWindow.ContentFrame.Content = new Items();
+                Close();
+                break;
+            }
         }
     }
 }

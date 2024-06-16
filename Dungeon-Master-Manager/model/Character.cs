@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using System.Windows;
 
 namespace Dungeon_Master_Manager.model
 {
@@ -17,13 +18,13 @@ namespace Dungeon_Master_Manager.model
         /// What element does the character master
         /// </summary>
         [JsonPropertyName("element")]
-        public Element Element { get; set; }
+        public Element Element { get; }
 
         /// <summary>
         /// What kind of weapons the character can wield
         /// </summary>
         [JsonPropertyName("acceptedWeapons")]
-        public WeaponClass AcceptedWeapons { get; set; }
+        public WeaponClass AcceptedWeapons { get; }
 
         /// <summary>
         /// User's weapon
@@ -35,13 +36,13 @@ namespace Dungeon_Master_Manager.model
         /// The items the character has equipped
         /// </summary>
         [JsonPropertyName("inventory")]
-        public List<Item> Inventory { get; set; }
+        public List<Item?> Inventory { get; } = [null, null, null, null];
 
         /// <summary>
         /// Percentage of health left
         /// </summary>
         [JsonPropertyName("health")]
-        public uint Health { get; set; }
+        public uint Health { get; private set; }
 
         /// <summary>
         /// Creates a new character
@@ -52,7 +53,6 @@ namespace Dungeon_Master_Manager.model
             Element = element;
             AcceptedWeapons = class_;
             Health = 20;
-            Inventory = new List<Item>();
         }
 
         public Character()
@@ -89,19 +89,37 @@ namespace Dungeon_Master_Manager.model
         /// <summary>
         /// Adds an item to the user's inventory
         /// </summary>
-        public void Equip(Item item)
+        public void Equip(int itemIndex)
         {
+            var item = ((App)Application.Current).Inventory[itemIndex];
             if (Inventory.Contains(item))
             {
-                throw new InvalidOperationException("Item is already equipped.");
+                MessageBox.Show("Cet object est déjà équipé !", $"Inventaire de {Name}", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+                ((App)Application.Current).Intent = Intent.View;
+                return;
             }
 
-            if (!(item.Type == ItemType.Weapon && AcceptedWeapons == item.Range))
+            if (item.Type == ItemType.Weapon && AcceptedWeapons != item.Range)
             {
-                throw new InvalidOperationException("This character cannot wield this weapon.");
+                MessageBox.Show(
+                    $"{Name} ne peux pas équiper cet arme ! Celle ci est de type {item.Range} et {Name} n'utilise que des armes de type {AcceptedWeapons}",
+                    $"Inventaire de {Name}", MessageBoxButton.OK, MessageBoxImage.Error);
+                ((App)Application.Current).Intent = Intent.View;
+                return;
             }
 
-            Inventory.Add(item);
+            var availablePosition = Inventory.IndexOf(null);
+            if (availablePosition == -1)
+            {
+                MessageBox.Show(
+                    $"L'inventaire de {Name} est plein ! Enlève un objet d'abord !",
+                    $"Inventaire de {Name}", MessageBoxButton.OK, MessageBoxImage.Error);
+                ((App)Application.Current).Intent = Intent.View;
+                return;
+            }
+
+            Inventory[availablePosition] = item;
 
             if (item.Type == ItemType.Weapon)
             {

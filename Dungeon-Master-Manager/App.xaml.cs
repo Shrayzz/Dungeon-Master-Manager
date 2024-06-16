@@ -118,7 +118,7 @@ namespace Dungeon_Master_Manager
                     }
 
                     missionLog += $"--- Au tour de {character.Name}\n";
-                    Item? healingItem = character.Inventory.FirstOrDefault(item => item.Type == ItemType.Consumable);
+                    Item? healingItem = character.Inventory.FirstOrDefault(item => item != null && item.Type == ItemType.Consumable);
                     if (character.Health < 10 && healingItem != null)
                     {
                         missionLog +=
@@ -250,7 +250,7 @@ namespace Dungeon_Master_Manager
             });
 
 
-            defaultCharacter.Equip(Inventory[0]);
+            defaultCharacter.Equip(0);
 
             AddCharacter(defaultCharacter);
 

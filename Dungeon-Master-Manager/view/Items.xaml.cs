@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Dungeon_Master_Manager.model;
 
 namespace Dungeon_Master_Manager.view
@@ -78,14 +68,14 @@ namespace Dungeon_Master_Manager.view
         private void ItemClicked(object sender, MouseButtonEventArgs e)
         {
             var it = ((App)Application.Current).Intent;
-            var clickedItem = Convert.ToUInt32(((Image)sender).Tag);
+            var clickedItem = Convert.ToInt32(((Image)sender).Tag);
             var app = ((App)Application.Current);
             switch (it)
             {
                 case Intent.Select:
                 {
                     // Add the item to the selected player
-                    app.Characters[app.SelectedThing].Equip(app.Inventory[clickedItem]);
+                    app.Characters[app.SelectedThing].Equip(clickedItem);
 
                     for (var i = 0; i < Application.Current.Windows.Count; i++)
                     {
@@ -124,7 +114,7 @@ namespace Dungeon_Master_Manager.view
                     //         gameWindow.ContentFrame.Content = new Characters();
                     //     }
                     // }
-                    
+
                     break;
                 }
 
